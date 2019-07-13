@@ -1,0 +1,24 @@
+.property {
+    margin-left: 75px;
+}
+.property .item-property {
+    margin-left: 25px;
+}
+
+.property .item-property input{
+    margin-right: 10px;
+}
+
+.content-contact {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 32px;
+    width: 45%;
+}
+
+.content {
+    position: relative;
+    height: 75vh;
+}

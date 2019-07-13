@@ -1,0 +1,927 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=vietnamese');
+.hidden{
+    display:none;
+}
+.page-node-add-khoahoc .group-khoahoc-div1 label,
+.page-node-add-khoahoc-dangky .group-khoahoc-dk-div1 label,
+.page-node-edit.node-type-khoahoc .group-khoahoc-div1 label{
+    font-family: Roboto;
+    font-style: normal;
+    line-height: normal;
+    font-size: 14px;
+    color: #1275d3;
+    font-weight: 500;
+    max-width: 15em;
+    min-width: 15em;
+}
+.page-node-add-khoahoc .group-khoahoc-div1 input,
+.page-node-edit.node-type-khoahoc .group-khoahoc-div1 input,
+.page-node-add-khoahoc-dangky .group-khoahoc-dk-div1 input{
+    /*background: #F4F4F4;*/
+    border: 1px solid #E4E4E4;
+    box-sizing: border-box;
+}
+.page-node-add-khoahoc div#content-wrapper,
+.page-node-edit.node-type-khoahoc div#content-wrapper,
+.page-node-add-khoahoc-dangky div#content-wrapper{
+    /* max-width: 1008px !important; */
+    /* width: 1008px !important; */
+    display: block;
+    background: white;
+    padding: 0px 30px;
+}
+.page-node-add-khoahoc #main-content,
+.page-node-edit.node-type-khoahoc  #main-content,
+.page-node-add-khoahoc-dangky #main-content{
+    background:transparent !important;
+}
+div#edit-field-khoahoc-noidung label {
+    float: left !important;
+    min-width: 10em;
+}
+div#edit-field-khoahoc-noidung {
+    display: flex;
+}
+div#edit-field-khoahoc-noidung .form-textarea-wrapper {
+    float: right;
+}
+.group-khoahoc-div1 > div{
+    clear: both;
+}
+table[id*=field-khoahoc-module-values] th.tabledrag {
+    min-width: auto;
+}
+table[id*=field-khoahoc-module-values] input {
+    max-width: 100%;
+}
+td.field-fc-khoahoc-tenmodule {
+    width: 300px !important;
+    max-width: 300px;
+}
+td.field-fc-khoahoc-hocphi {
+    max-width: 100px;
+}
+table[id*=field-khoahoc-module-values] label {
+    min-width: auto;
+    /*max-width: 100px!important;*/
+    /*width: 100px !important;*/
+}
+td.field-fc-khoahoc-makh {
+    max-width: 100px;
+}
+td.field-fc-khoahoc-ngayhoc input {
+    max-width: 100px;
+}
+td.field-fc-khoahoc-thoigian {
+    max-width: 100px;
+}
+table[id*=field-khoahoc-module-values] td.remove-button {
+    text-align: center;
+}
+table[id*=field-khoahoc-module-values] td.remove-button input {
+    text-indent: -9999px;
+    background: url(../../../../images/boaweb/icon_trash.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: none !important;
+    margin: 0px;
+}
+table[id*=field-khoahoc-module-values] th:last-child label {
+    font-size: 0px;
+}
+table[id*=field-khoahoc-module-values] th:nth-child(5){
+    width:50px;
+}
+table[id*=field-khoahoc-module-values] th:last-child {
+    padding: 0px;
+    width: 20px!important;
+    max-width: 20px !important;
+    min-width: 20px;
+}
+table[id*=field-khoahoc-module-values] .date-no-float {
+    /*width: 50%;*/
+    float: left;
+}
+table[id*=field-khoahoc-module-values] th label{
+    color: white !important;
+}
+table[id*=field-khoahoc-module-values] th {
+    background: #1275d3 !important;
+    border: none;
+    padding: 5px 0px;
+}
+table[id*=field-khoahoc-module-values] thead tr th:not(.tabledrag) label {
+    min-width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+    margin: 0px;
+}
+div#edit-field-khoahoc-module .clearfix input {
+    text-align: center;
+    width: 100% !important;
+    margin: 0px;
+    border-top: 0px;
+    background: #1275d3;
+    color: white;
+}
+table[id*=field-khoahoc-module-values] tbody tr td >div {
+    margin: 0px;
+}
+td.field-fc-khoahoc-ngayhoc .form-item > div {
+    padding: 0px;
+}
+.node-type-khoahoc .field-label {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 14px;
+    color: #444444;
+}
+.node-type-khoahoc.page-views .group-khoahoc-div1 > div {
+    padding-bottom: 10px;
+    /*float: left;*/
+}
+/*Danh sách khóa học*/
+ul.list-khoahoc span.timeline-content {
+    background: #F4F4F4;
+    border: 1px solid #E4E4E4;
+    padding: 20px 0px;
+    width: 540px;
+}
+ul.list-khoahoc {
+    margin: 0.25em 0 0.25em 0em;
+}
+.khoahoc-thoigianhoc {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 16px;
+    color: #000000;
+}
+.khoahoc-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 18px;
+    color: #000000;
+}
+.khoahoc-thoigianhoc {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 16px;
+    color: #000000;
+}
+.khoahoc-diachi {
+    padding:5px 0px;
+}
+.khoahoc-handangky,
+.khoahoc-diachi{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 14px;
+    color: #666666;
+}
+.khoahoc-handangky > span:first-child, .khoahoc-diachi > span{
+    font-weight: 600;
+}
+ul.list-khoahoc li span.timeline-text {
+    width: 100%;
+    text-align: left;
+    float: none;
+    padding: 0px 15px 0px 20px;
+    display: block;
+}
+ul.list-khoahoc li:nth-child(even) span.timeline-text {
+    padding: 0px 15px 0px 0px;
+}
+ul.list-khoahoc li:nth-child(odd) span.timeline-text {
+    text-align: left;
+}
+ul.list-khoahoc li:nth-child(odd) .khoahoc-thoigianhoc {
+    position: absolute;
+    right: -220px;
+    top: 45%;
+}
+ul.list-khoahoc li:nth-child(even) .khoahoc-thoigianhoc {
+    position: absolute;
+    left: -220px;
+    top: 45%;
+}
+.btn-dk-khoahoc > a {
+    background: #134084;
+    display: block;
+    padding: 10px;
+    width: 125px;
+    margin-top: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border-radius: 4px;
+}
+.view-khoahoc.view-id-khoahoc div#views-fieldset {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.view-khoahoc.view-id-khoahoc div#views-fieldset form#views-exposed-form-khoahoc-page > div {
+    border: 1px solid #e5e5e5;
+}
+.view-khoahoc.view-id-khoahoc .views-exposed-widgets {
+    margin-bottom: 0px;
+    display: flex;
+}
+.view-khoahoc.view-id-khoahoc div#views-fieldset div#edit-date-filter-wrapper {
+    padding: 0px;
+}
+.view-khoahoc.view-id-khoahoc div#views-fieldset .form-type-date-select.form-item-date-filter-value {
+    margin: 0px;
+}
+.view-khoahoc.view-id-khoahoc div#views-fieldset select {
+    margin: 0px;
+    border: none;
+    height: 37px;
+    display: flex;
+}
+.view-khoahoc.view-id-khoahoc div#views-fieldset .form-item-title {
+    padding: 0px;
+}
+.view-khoahoc.view-id-khoahoc div#views-fieldset input#edit-title {
+    border: none;
+    border-left: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin: 0px;
+    width:360px !important;
+}
+.view-khoahoc.view-id-khoahoc .views-submit-button {
+    padding: 0px;
+    background: transparent;
+    margin-top: 6px;
+    margin-right: 6px;
+}
+.view-khoahoc.view-id-khoahoc .views-submit-button input {
+    background: transparent url(../../../../images/boaweb/search-khoahoc.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-indent: -999999px;
+    padding: 0px !important;
+    width: 25px !important;
+    height: 25px !important;
+    background-position: bottom center;
+    transition: 0.75s;
+}
+.view-khoahoc.view-id-khoahoc .views-submit-button input:hover {
+    background: transparent url(../../../../images/boaweb/search-khoahoc.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-indent: -999999px;
+    padding: 0px !important;
+    width: 25px !important;
+    height: 25px !important;
+    background-position: bottom center;
+    transform: rotate(360deg);
+}
+.page-khoahoc h1#page-title {
+    background: #134084;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    height: 50px;
+    margin: 0px -10px 30px;
+}
+.view-khoahoc.view-id-khoahoc div#edit-title-wrapper {
+    padding: 0px;
+}
+.view-khoahoc.view-id-khoahoc .view-empty {
+    text-align: center;
+    color: red;
+    font-family: Roboto;
+    font-weight: 500;
+}
+.node-type-khoahoc h1#page-title {
+    line-height: normal;
+}
+.khoahoc-title:hover {
+    color: #134084;
+}
+div#edit-field-khoahoc-dk-hocvien table[id*=field-khoahoc-dk-hocvien-values] thead th.tabledrag {
+    min-width: auto;
+}
+div#edit-field-khoahoc-dk-hocvien table[id*=field-khoahoc-dk-hocvien-values] th:not(.tabledrag) label{
+    min-width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+    margin: 0px;
+}
+div#edit-field-khoahoc-dk-hocvien table[id*=field-khoahoc-dk-hocvien-values] tbody td input {
+    max-width: 100%;
+}
+td.field-khoahoc-dk-tenhocvien {
+    max-width: 300px;
+    width: 300px;
+}
+td.field-khoahoc-dk-phonehocvien {
+    max-width: 150px;
+}
+td.field-khoahoc-dk-emailhocvien {
+    max-width: 300px;
+}
+.page-node-add-khoahoc-dangky div#main-content {
+    box-shadow: none !important;
+}
+.btn-add-hocvien a {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #275599;
+    margin-top: 15px;
+    background: #275599;
+    color: white;
+    font-weight: bold;
+    font-family: Roboto;
+    font-size: 14px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-right: 15px;
+}
+.btn-add-hocvien{
+    float: left;
+}
+/*.field-item.even > div:last-child {*/
+/*    float: left;*/
+/*}*/
+.node-khoahoc-dangky .group-khoahoc-dk-div1 > div,.node-khoahoc-dangky .group-khohoc-dk-ttvhd div.field {
+    padding-bottom: 5px;
+    display: block;
+    clear: both;
+    padding: 5px 0px;
+}
+.ui-dialog-titlebar {
+    background: #40608f;
+    border: none !important;
+    box-shadow: none !important;
+}
+.ui-dialog.ui-widget.ui-widget-content {
+    padding: 0px;
+}
+button#openmodal {
+    display: none;
+}
+.field.field-name-field-khoahoc-module, 
+.field-name-field-khoahoc-donvithamgia {
+    clear: both;
+    float: none !important;
+}
+.field-name-field-khoahoc-donvithamgia .field-label,
+.field.field-name-field-khoahoc-module .field-label, 
+.field-name-field-khoahoc-dshocvien .field-label {
+    background: #0058a8;
+    padding: 10px;
+    margin: 0px;
+    color: white;
+    text-transform: uppercase;
+}
+.view-id-ql_noidung table caption {
+    text-align: left;
+    background: #275599;
+    color: white;
+    padding: 10px 10px;
+    font-weight: bold;
+}
+input#edit-field-khoahoc-tongchiphi-und-0-value {
+    pointer-events: none;
+    background: #e3e3e3;
+}
+.page-node.page-node-add.page-node-add-khoahoc-dangky div#content-wrapper div#main-content {
+    width: 100%;
+    display: block;
+    padding: 0px;
+}
+.page-node.page-node-add.page-node-add-khoahoc-dangky div#content-wrapper div#main-content h1#page-title {
+    padding-top: 0px;
+    background: #134084;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Roboto;
+    font-weight: 500;
+}
+.page-node.page-node-add.page-node-add-khoahoc-dangky div#content-wrapper div#main-content .region.region-content {
+    margin: auto;
+    /* max-width: 900px; */
+    padding: 0px 15px;
+}
+.page-node.page-node-add.page-node-add-khoahoc-dangky div#edit-actions {
+    text-align: center;
+}
+.page-node.page-node-add.page-node-add-khoahoc-dangky div#edit-actions input#edit-submit {
+    display: block;
+    margin: auto;
+    background: #0058a8;
+    padding: 10px 40px;
+    border-radius: 4px;
+}
+.page-node-add.page-node-add-khoahoc-dangky div#content-wrapper {
+    padding: 0px;
+ /*   max-width: 768px !important; */
+}
+.node-khoahoc-dangky.node-unpublished {
+    background: white;
+}
+.views-exposed-form .views-exposed-widgets > div label {
+    font-size: 14px !important;
+    font-family: Roboto !important;
+    font-weight: 500 !important;
+    min-width: auto !important;
+}
+div#edit-date-filter-1-wrapper .views-widget label {
+    display: none;
+}
+.tinhtrang-icon-1::before {
+    content: "\f00c";
+    font-family: FontAwesome;
+    color: green;
+}
+.tinhtrang-icon-0::before {
+    content: "\f00d";
+    font-family: FontAwesome;
+    color: red;
+}
+.page-node-add.page-node-add-khoahoc-dangky div#breadcrumb {
+    visibility: hidden;
+}
+/*CSS steep*/
+ul.progressbar {
+    overflow: hidden;
+    counter-reset: step;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    background: url(../../../../images/boaweb/bg.png) repeat;
+}
+ul.progressbar li {
+    list-style-type: none;
+    color: #134084;
+    text-transform: uppercase;
+    font-size: 12px;
+    width: 50%;
+    float: left;
+    position: relative;
+    font-family: Roboto;
+    font-weight: 500;
+    padding: 15px;
+}
+ul.progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    line-height: 20px;
+    display: block;
+    font-size: 12px;
+    color: #333;
+    background: white;
+    border-radius: 3px;
+    margin: 0 auto 5px auto;
+    position: relative;
+    z-index: 2;
+    border: 1px solid #134084;
+}
+ul.progressbar li.active:before, ul.progressbar li.active:after {
+    background: #134084;
+    color: white;
+}
+ul.progressbar li.active-last::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #13408436;
+    position: absolute;
+    left: -50%;
+    top: 25px;
+    z-index: 1;
+}
+ul.progressbar li.active-last.active::after {
+   background:#134084;
+}
+/*end css step*/
+.node-type-khoahoc-dangky div#main-content {
+    padding: 0px;
+    box-shadow:none !important;
+}
+.node-type-khoahoc-dangky h1#page-title {
+    padding-top: 0px;
+    background: #134084;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Roboto;
+    font-weight: 500;
+}
+.node-type-khoahoc-dangky div#navigation {
+    display: none;
+}
+.node-type-khoahoc-dangky .region.region-content {
+    padding: 0px 15px;
+}
+form#hoc-vien-node-form div#edit-actions {
+    text-align: center;
+}
+form#hoc-vien-node-form div#edit-actions input {
+    background: #134084;
+    padding: 10px 40px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: Roboto;
+    border-radius: 4px;
+}
+h1#page-title >em {
+    display: none;
+}
+div#edit-field-khoahoc-maso {
+    float: left;
+    margin-bottom: 0px;
+}
+input#edit-field-khoahoc-maso-und-0-value {
+    width: 100px;
+}
+div#edit-field-khoahoc-dk-hoten {
+    clear: both;
+}
+div#edit-field-khoahoc-dk-listvi {
+    float: left;
+    margin-bottom: 0px;
+}
+div#edit-field-khoahoc-dk-listvi label {
+    display: none;
+}
+.field-name-field-khoahoc-dangkykhoahoc a {
+    background: #134084;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+}
+.not-logged-in .messages.status {
+    /*display: none;*/
+}
+.view-id-danhsachhocvien.view-display-id-block_2 .view-content {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    /*width: 760px;*/
+    /*max-width: 760px;*/
+}
+.view-id-danhsachhocvien.view-display-id-block_2 .view-content > table {
+    width: 100%;
+}
+.node-type-khoahoc div#main-content {
+    padding: 0px;
+}
+.node-type-khoahoc h1#page-title {
+    background: #134084;
+    color: white;
+    padding: 15px;
+    margin-bottom: 0px;
+}
+.node-type-khoahoc #block-system-main > .content {
+    padding: 10px 15px;
+}
+div#edit-field-khoahoc-dk-diachi {
+    clear: both;
+}
+div#edit-field-khoahoc-dk-hinhthuc-und {
+    float: left;
+}
+div#edit-field-khoahoc-donvi {
+    clear: both;
+}
+.form-item-field-khoahoc-dk-hinhthuc-und input {
+    float: left;
+}
+
+.form-item-field-khoahoc-dk-hinhthuc-und label.option {
+    float: right;
+    padding-left: 10px;
+    font-size: 12px;
+}
+div#edit-field-khoahoc-dk-hinhthuc-und >div {
+    float: left;
+    clear: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.group-khoahoc-dk-div1.field-group-div.uk-width-1-1 input,
+select#edit-field-khoahoc-dk-listvi-und {
+    font-size: 12px;
+}
+.view-id-danhsachdangkykhoahoc.view-display-id-block_1 {
+    width: 100%;
+}
+.view-id-danhsachhocvien.view-display-id-block_2 caption {
+    font-weight: bold;
+    text-align: left;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.views-field-field-fc-khoahoc-sl-xacnhan, 
+.views-field-field-fc-khoahoc-sl-datcho, 
+.views-field-field-fc-khoahoc-hocphi {
+    min-width: 70px;
+    text-align: center;
+    padding: 0px;
+}
+.view-id-danhsachdangkykhoahoc.view-display-id-block_1 table .views-field.views-field-view, 
+.view-id-danhsachdangkykhoahoc.view-display-id-block_1 table .views-field-field-khoahoc-dk-thanhtoan, 
+.view-id-danhsachdangkykhoahoc.view-display-id-block_1 table .views-field-field-khoahoc-dk-ttxn {
+    text-align: center;
+}
+.view-id-field_collection_view.view-display-id-block_1 {
+    width: 100%;
+}
+.views-field.views-field-counter {
+    min-width: 10px;
+    width: 10px;
+}
+th.views-field.views-field-php {
+    min-width: 10px;
+}
+div#main-content {
+/*    max-width: 768px;*/
+    overflow: auto;
+}
+/*table {*/
+/*    max-width: 960px;*/
+/*}*/
+input#edit-field-hocvien-hocphi-und-0-value {
+    background: whitesmoke;
+    pointer-events: none;
+}
+.page-node-add-khoahoc div#main-content {
+    max-width: 100%;
+}
+.view-id-ql_noidung.view-display-id-page_9 table {
+    width: 100%;
+    max-width: 100%;
+}
+.node-type-khoahoc div#main-content {
+    padding: 0px;
+    max-width: 940px !important;
+    width: 1008px !important;
+}
+.view-id-danhsachhocvien.view-display-id-block_2 table.views-table {
+    table-layout: fixed;
+}
+.view-id-danhsachhocvien.view-display-id-block_2 .views-field.views-field-counter {
+    min-width: 10px;
+    width: 40px;
+    text-align: center;
+}
+.node-type-khoahoc-dangky.page-views td.input-checkbox,
+.node-type-khoahoc-dangky.page-views th.title-chon{
+    display: none;
+}
+.page-node-add.page-node-add-khoahoc-dangky td.input-checkbox,
+.page-node-add.page-node-add-khoahoc-dangky th.title-chon {
+    display: none;
+}
+input#edit-field-khoahoc-dk-tongtien-und-0-value {
+    pointer-events: none;
+    background: #f5f5f5;
+}
+a.fieldset-title {
+    font-weight: 500;
+}
+span.ycgcx {
+    font-size: 12px;
+    font-family: Roboto;
+ /*   color: red;
+    font-weight: bold;*/
+}
+.group-khoahoc-dk-ttvhd {
+    padding: 15px;
+}
+.required-fields.group-khoahoc-dk-ttvhd legend {
+    height: 20px;
+    margin-bottom: 15px;
+}
+.required-fields.group-khoahoc-dk-group1 {
+    position: relative;
+    clear: both;
+}
+div#edit-field-khoahoc-dk-chucdanh label {
+    display: none;
+}
+div#edit-field-khoahoc-dk-chucdanh {
+    position: absolute;
+    left: 220px;
+}
+div#edit-field-khoahoc-dk-chucdanh select {
+    font-size: 12px !important;
+}
+div#edit-field-khoahoc-dk-hoten input {
+    margin-left: 50px;
+    width: calc(409px - 50px);
+}
+.group-hocvien-group1 {
+    position: relative;
+    clear: both;
+    display: flex;
+}
+div#edit-field-hocvien-nhanxung label {
+    display: none;
+}
+div#edit-field-hocvien-nhanxung {
+    position: absolute;
+    left: 150px;
+}
+select#edit-field-hocvien-nhanxung-und {
+    font-size: 12px !important;
+}
+.group-hocvien-group1 input#edit-title {
+    margin-left: 50px;
+    width: 422px;
+}
+.ui-dialog-title {
+    padding: 2px;
+    margin: 0px !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    text-align: center;
+    width: 100% !important;
+    display: block;
+    float: none;
+}
+table#ds_hocvien caption, 
+table#modulehoc_hocvien caption {
+    background: #0058a8;
+    padding: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+.view-id-ql_noidung.view-display-id-page_11 table .views-field-nothing, 
+.view-id-ql_noidung.view-display-id-page_11 table .views-field-php-1 {
+    min-width: 35px;
+}
+.required-fields.group-khoahoc-dk-ttvhd {
+    clear: both;
+}
+.text-center {
+    text-align: center;
+}
+
+.view-id-khoahoc.view-display-id-page h2 {
+    color: #134084;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+@media screen and (max-width:768px){
+    .simple_timeline ul li > div {
+        width: 100%;
+        background: transparent !important;
+        padding: 0px !important;
+        margin: 0px !important;
+        text-align: left;
+    }
+    .simple_timeline ul li {
+        float: none !important;
+        width: 100%;
+        clear: both !important;
+        display: block;
+        position: relative;
+    }
+    ul.list-khoahoc {
+        margin: 0;
+    }
+    span.timeline-content {
+        clear: both !important;
+        float: none !important;
+    }
+    span.timeline-image {
+        background: none !important;
+    }
+    .simple_timeline ul {
+        background: transparent;
+        margin: 0;
+    }
+    ul.list-khoahoc span.timeline-content {
+        display: inline-block;
+        border: none !important;
+        background: transparent;
+        width: auto;
+    }
+    h3.timeline-date {
+        display: none;
+    }
+    .khoahoc-title {
+        word-break: break-word;
+    }
+    ul.list-khoahoc li span.timeline-text {
+        float: none !important;
+        margin: 0px !important;
+        clear: both !important;
+        width: auto;
+    }
+    .khoahoc-thoigianhoc {
+        display: none;
+    }
+    span.timeline-text {
+        padding: 0px !important;
+    }
+    .page-node-add-khoahoc div#content-wrapper, .page-node-edit.node-type-khoahoc div#content-wrapper, 
+    .page-node-add-khoahoc-dangky div#content-wrapper {
+        width: auto !important;
+    }
+    div#edit-field-khoahoc-maso {
+        float: none;
+    }
+    div#edit-field-khoahoc-maso label {
+        float: none;
+    }
+    .view-khoahoc.view-id-khoahoc div#views-fieldset input#edit-title {
+        border: none;
+        border-left: 1px solid #e5e5e5;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        margin: 0px;
+        width:360px !important;
+    }
+}
+th.dangky-show-khoahoc-date{
+    width:90px;
+}
+th.dangky-show-khoahoc-time {
+    width:110px;
+}
+th.dangky-show-khoahoc-stt {
+    width:30px;
+}
+div.field-name-field-khohoc-dk-thongtinkh.field-type-markup th{
+    text-align:center;
+}
+div#edit-field-khoahoc-dk-hocvien table:last-child thead th:nth-child(2) {
+    min-width: 11px;
+    padding-left: 0;
+    width: 80px;
+}
+
+td.field-khoahoc-dk-fc-nhanxung select {
+    width: 50px;
+}
+
+td.field-khoahoc-dk-fc-sdt {
+    width: 140px;
+}
+
+td.field-khoahoc-dk-fc-hoten input {
+    width: 200px !important;
+}
+
+td.field-khoahoc-dk-fc-hoten {
+    width: 200px;
+}
+
+td.field-khoahoc-dk-fc-email,td.field-khoahoc-dk-fc-email input {
+    width: 220px !important;
+}
+
+div#edit-field-khoahoc-dk-hocvien table:last-child td.remove-button input {
+    padding: 4px;
+    width: 55px;
+}
+
+div#edit-field-khoahoc-dk-hocvien table:last-child td.remove-button {
+    width: 55px;
+}
+div#edit-field-khoahoc-dk-hocvien table:last-child button.ui-multiselect.ui-widget.ui-state-default.ui-corner-all {
+    width: 100% !important;
+}
+.page-node-add-khoahoc-dangky > .ui-multiselect-menu {
+    width: 250px !important;
+}
+span.hocphi-module {
+    color: #b73939;
+    font-weight: bold;
+    padding-left: 15px;
+}

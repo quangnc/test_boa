@@ -1,0 +1,12 @@
+.uk-grid {
+max-width:1269px;
+}
+
+body #page-title {
+  background: transparent;
+  padding-top: 0px;
+}
+
+body ul.uk-navbar-nav{
+list-style-type: none;
+}

@@ -1,0 +1,1 @@
+<p>Success {{ $data  }}</p>

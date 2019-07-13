@@ -1,0 +1,47 @@
+/*menu quantri*/
+.sf-menu.sf-style-spring li, .sf-menu.sf-style-spring.sf-navbar{
+  background: whitesmoke none repeat scroll 0 0;   
+}
+#menu-381-1 {
+    background: #F58220 none repeat scroll 0 0;
+}
+#menu-381-1 a {
+    color: white;
+    font-weight: bold;
+}
+#block-superfish-1 {
+    border: 2px solid #F58220;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    z-index: 2000;
+}
+/*end*/
+.page-node .node-tintuc-form .form-type-textarea label {
+    float: left;
+}
+/*term ref tree*/
+#tintuc-node-form .field-type-taxonomy-term-reference {
+    margin-bottom: 0;
+}
+#edit-field-nhomtin-und {
+    float: left;
+}
+.no-term-reference-tree-button {
+    background-color: transparent;
+}
+#page form .term-reference-tree label.option {
+    float: none;
+    font-size: 12px;
+    min-width: auto;
+    text-align: left;
+}
+/*end*/
+
+h1.big{
+    font-size: 45px;
+    letter-spacing: -1px;
+    line-height: 60px;
+    margin-bottom: 40px;
+   color:#F9A445;
+}

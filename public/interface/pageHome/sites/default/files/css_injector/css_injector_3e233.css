@@ -1,0 +1,154 @@
+#page-title{
+ background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+div.grippie,
+.form-item-promote
+{
+display:none;
+}
+
+/*taxonomy manager*/
+#taxonomy-manager-form  .container-inline,
+#edit-double-tree-show,
+#edit-export-show,
+#taxonomy-term-data-replace .overflow-fix,
+img[alt="link to term page"],
+#taxonomy-term-data-replace a[rel="tag"],
+#taxonomy-term-data-replace fieldset[id*="edit-description-format"],
+#taxonomy-term-data-replace .form-item-weight,
+label[for="edit-add-mass-add"]
+{
+display:none;
+}
+#taxonomy-term-data-replace .form-item label{
+    float: left;
+    font-size: 14px;
+    width: 8em;
+}
+textarea[id*="edit-description-value"]{
+width:475px;
+
+}
+/*end*/
+
+.form-item label {
+    font-size: 14px;
+}
+.views-exposed-form label {
+    font-size: 14px;
+}
+body.adminimal-theme * {
+    box-sizing:border-box;
+}
+.ckeditor_links, .filter-wrapper {
+    clear:both;
+}
+ul.primary { 
+    margin-bottom:12px;
+}
+body.adminimal-theme .cke_toolgroup {
+    padding-bottom: 8px;
+}
+#views-exposed-form-ql-noidung-page #edit-type {
+    width:150px;
+}
+.form-item .form-item {
+    padding:0px;
+}
+/*views date filter*/
+label[for=edit-date-filter-min],
+label[for=edit-date-filter-max],
+.container-inline-date .description {
+    display:none;
+}
+.container-inline-date .form-item-date-filter-min-date input,
+.container-inline-date .form-item-date-filter-max-date input {
+    width:80px;
+}
+#edit-date-filter-min-wrapper,
+#edit-date-filter-max-wrapper {
+    float: left;
+}
+ul.uk-nav {
+    list-style-type: none;
+    margin: 5px;
+}
+.node-form #edit-actions {
+    border-top: 1px dashed gainsboro;
+    padding-top: 10px;
+    text-align: center;
+}
+#edit-field-noidung .form-textarea-wrapper {
+    /*float:left;*/
+    clear: both;
+}
+.node-form label,
+#user-login label {
+    float: left;
+    min-width: 10em;
+    margin-right: 10px;
+    font-weight: 500;
+}
+.block-superfish .item-list ul li, .block-superfish li.leaf, .block-superfish ul.menu li {
+    list-style-type: none;   
+}
+
+#top ul {
+    margin-left:0px;
+    margin-top:0px;
+}
+#top {
+    height: 34px;
+}
+.form-item.form-type-radio.form-item-submitted-loai-dich-vu {
+    margin-right: 20px;
+}
+.webform-component > label {
+    width: 165px;
+    float: left;
+    clear: both;
+}
+/*#page-title {
+    color: #e44a00;
+    text-transform: uppercase;
+    border-bottom: 1px solid gainsboro;
+}*/
+/*pager*/
+.pager li a,
+.item-list .pager li.pager-current {
+    background: #f7f7f7 none repeat scroll 0 0 border-box;
+    color: #666;
+    padding: 6px 13px;
+    text-shadow: 0 1px 0 #fff;
+}
+.item-list .pager li.pager-current {
+    background: #009dd8;
+    color:white;
+    border: medium none;
+}
+.item-list .pager li {
+    padding: 0px;
+}
+
+.item-list .pager {
+    line-height: 50px;
+}
+.sf-menu li ul {
+    overflow: visible !important; 
+}
+body.not-logged-in .clearfix::after{
+    content: none;
+}
+.node-form .form-type-textarea label {
+    clear: both;
+    float: none;
+}
+#background-my-form .form-item-check {
+    display: none;
+}
+div.view-id-danhsachhocvien.view-display-id-block_3 th.views-field.views-field-php{
+    width:115px;
+}
+div.view-id-danhsachhocvien.view-display-id-block_3 th.views-field.views-field-php-1{
+    width:105px;
+}

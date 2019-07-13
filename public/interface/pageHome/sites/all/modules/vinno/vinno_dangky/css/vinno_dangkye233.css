@@ -1,0 +1,66 @@
+#edit-field-dangky-hoantat input.form-checkbox{
+	float: left;
+	position: relative;
+	top: 5px;
+	margin-right: 5px;
+}
+#edit-field-dangky-hoantat label{
+	font-weight: bold !important;
+}
+th.views-field-counter{
+	min-width:inherit;
+	width:50px;
+}
+#edit-field-dangky-hoantat .description{
+	margin:0px;
+}
+#edit-field-dangky-hoantat .boa-dk{
+	clear:both;
+	margin:0px;
+	background: yellow;
+	padding:10px;
+}
+.page-node-add-dang-ky #page-title{
+	text-transform: uppercase;
+	width: 100%;
+	background: url(../../../../../../images/boaweb/bg_gray.gif) repeat-x left 28px;
+}
+.page-node-add-dang-ky #page-title span{
+	background: #134084;
+	display: inline-block;
+	color: #fff;
+	padding: 0px 45px;
+	border-radius: 5px;
+}
+.page-node-add-dang-ky #page-title span:before{
+	content: "\f02d";
+	font-family: FontAwesome;
+	padding-right:6px
+}
+.view-filters input.form-text{
+	width:auto !important;
+	height:auto !important;
+}
+.view-filters input.form-submit{
+	margin: 0px !important;
+	text-transform: none !important;
+	font-size: 16px !important;
+	padding: 10px 18px !important;
+	width: auto !important;
+	height: auto !important;
+	/* top: 21px; */
+	position: relative;
+}
+.view-filters #edit-reset{
+	background:#e3e3e3;
+	color:#333 !important;
+}
+.ui-widget table th{
+	text-align: left !important;
+}
+div.views-megarow-content .megarow-header{
+	width: 100%;
+}
+#nice-menu-1 > li.hide_en, #nice-menu-1 > li.hide_en ~ li{
+	display: none;
+}

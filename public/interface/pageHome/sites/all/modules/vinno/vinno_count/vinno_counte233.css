@@ -1,0 +1,16 @@
+.highlight{
+  background: yellow;
+}
+
+.treeview, .treeview ul{
+ padding: 0 !important;
+}
+
+.termlist li{
+padding: 0 !important;
+}
+
+.treeview li{
+    margin: 0 !important;
+    padding: 3px 0 3px 16px !important;
+}
