@@ -32,8 +32,7 @@ class SendMailContact extends Mailable
         
         $from = Setting::where('code', 'email')->first()->value;
         // $site_name = Setting::where('key','config_site_name')->first()->value;
-
-        return $this->from($from)
+        return $this->to($from)
                     // ->subject($this->contact['subject'])
                     ->subject('Contact')
                     ->view('mail.contact');

@@ -20,6 +20,7 @@ Vue.component('choose-image', require('./components/ImageManager.vue'));
 Vue.component('list-images', require('./components/ListImage.vue'));
 Vue.component('gallery', require('./components/Gallery.vue'));
 Vue.component('slideshow', require('./components/Slideshow.vue'));
+Vue.component('partner', require('./components/Partner.vue'));
 Vue.component('megamenu', require('./components/Megamenu.vue'));
 Vue.component('special', require('./components/Special.vue'));
 Vue.component('specialcruise', require('./components/SpecialCruise.vue'));

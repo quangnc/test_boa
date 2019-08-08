@@ -23,15 +23,6 @@ class ContactService
 			array( 'router' => 'getDashboard', 'title' => 'Dashboard', 'active' => false ),
 			array( 'router' => 'admin-contact.index', 'title' => 'List Contact', 'active' => true ),
 		);
-		$data['actions']     = [
-			array(
-				'className' => "btn btn-primary",
-				'text'      => 'New Contact ',
-				'id'        => '',
-				'tag'       => 'a',
-				'href'      => route( 'admin-contact.create' )
-			)
-		];
 		return $data;
 	}
 	
@@ -54,14 +45,7 @@ class ContactService
                 'id'        => '',
                 'tag'       => 'a',
                 'href'      => route( 'admin-contact.index' )
-            ),
-            array(
-                'className' => "btn btn-primary save-form",
-                'form'      => $form,
-                'text'      => 'Save',
-                'id'        => '',
-                'tag'       => 'button'
-            ),
+            )
 		];
 		return $data;
 	}

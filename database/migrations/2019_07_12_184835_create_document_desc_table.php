@@ -14,8 +14,10 @@ class CreateDocumentDescTable extends Migration
     public function up()
     {
         Schema::create('document_desc', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+            $table->integer('document_id')->length(2)->unsigned();
+            $table->integer('language_id')->length(11)->unsigned();
+            $table->string('name', 255);
+            $table->string('description', 255);
         });
     }
 

@@ -13913,6 +13913,7 @@ Vue.component('choose-image', __webpack_require__(46));
 Vue.component('list-images', __webpack_require__(51));
 Vue.component('gallery', __webpack_require__(56));
 Vue.component('slideshow', __webpack_require__(61));
+Vue.component('partner', __webpack_require__(147));
 Vue.component('megamenu', __webpack_require__(66));
 Vue.component('special', __webpack_require__(71));
 Vue.component('specialcruise', __webpack_require__(76));
@@ -41667,6 +41668,459 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 137 */,
+/* 138 */,
+/* 139 */,
+/* 140 */,
+/* 141 */,
+/* 142 */,
+/* 143 */,
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(148)
+}
+var normalizeComponent = __webpack_require__(3)
+/* script */
+var __vue_script__ = __webpack_require__(150)
+/* template */
+var __vue_template__ = __webpack_require__(151)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Partner.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-7b5f54e1", Component.options)
+  } else {
+    hotAPI.reload("data-v-7b5f54e1", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 148 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(149);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("028e5074", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7b5f54e1\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/stylus-loader/index.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Partner.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7b5f54e1\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/stylus-loader/index.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Partner.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 149 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/***/ }),
+/* 150 */
+/***/ (function(module, exports) {
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+module.exports = {
+	data: function data() {
+		return {
+			dataImage: this.value
+		};
+	},
+
+	props: {
+		value: {
+			type: Array,
+			default: function _default() {
+				return new Array();
+			}
+		},
+
+		inputName: {
+			type: String,
+			default: 'images'
+		}
+	},
+
+	computed: {},
+
+	methods: {
+
+		addImage: function addImage() {
+			this.dataImage.push({
+				id: +new Date(),
+				image: '',
+				sort_order: 0
+			});
+		},
+
+		removeImage: function removeImage(img) {
+
+			var dataImage = this.dataImage.filter(function (image) {
+				return image.id !== img.id;
+			});
+
+			this.dataImage = dataImage;
+		},
+
+		getId: function getId(id) {
+			return "slideshow" + id;
+		},
+
+		getName: function getName(index, name) {
+			return this.inputName + "[" + index + "][" + name + "]";
+		}
+
+	}
+};
+
+/***/ }),
+/* 151 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c(
+      "table",
+      { staticClass: "table table-striped table-bordered table-hover" },
+      [
+        _vm._m(0),
+        _vm._v(" "),
+        _vm.dataImage.length
+          ? _c(
+              "tbody",
+              _vm._l(_vm.dataImage, function(img, index) {
+                return _c("tr", [
+                  _c(
+                    "td",
+                    [
+                      _c("choose-image", {
+                        attrs: {
+                          id: _vm.getId(img.id),
+                          "input-name": _vm.getName(index, "image"),
+                          value: img.image
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: img.id,
+                            expression: "img.id"
+                          }
+                        ],
+                        attrs: {
+                          type: "hidden",
+                          name: _vm.getName(index, "id")
+                        },
+                        domProps: { value: img.id },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(img, "id", $event.target.value)
+                          }
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: img.name,
+                          expression: "img.name"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { type: "text", name: _vm.getName(index, "name") },
+                      domProps: { value: img.name },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(img, "name", $event.target.value)
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: img.url,
+                          expression: "img.url"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { type: "text", name: _vm.getName(index, "url") },
+                      domProps: { value: img.url },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(img, "url", $event.target.value)
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c(
+                      "select",
+                      {
+                        staticClass: "form-control",
+                        attrs: { name: _vm.getName(index, "status") }
+                      },
+                      [
+                        _c("option", { attrs: { value: "0" } }, [
+                          _vm._v("Enable")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "1" } }, [
+                          _vm._v("Disable")
+                        ])
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: img.sort_order,
+                          expression: "img.sort_order"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        name: _vm.getName(index, "sort_order")
+                      },
+                      domProps: { value: img.sort_order },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(img, "sort_order", $event.target.value)
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-danger",
+                        attrs: { type: "button", index: "index" },
+                        on: {
+                          click: function($event) {
+                            _vm.removeImage(img)
+                          }
+                        }
+                      },
+                      [_c("i", { staticClass: "fa fa-minus-circle" })]
+                    )
+                  ])
+                ])
+              })
+            )
+          : _vm._e(),
+        _vm._v(" "),
+        _c("tfoot", [
+          _c("tr", [
+            _c("td", { attrs: { colspan: "5" } }),
+            _vm._v(" "),
+            _c("td", { staticClass: "text-left" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-primary",
+                  attrs: { type: "button" },
+                  on: { click: _vm.addImage }
+                },
+                [_c("i", { staticClass: "fa fa-plus-circle" })]
+              )
+            ])
+          ])
+        ])
+      ]
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [_vm._v("Image")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Name")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Url")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Status")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Sort Order")]),
+        _vm._v(" "),
+        _c("th")
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-7b5f54e1", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

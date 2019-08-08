@@ -14,8 +14,10 @@ Auth::routes();
 
 Route::middleware( [ 'currency', 'setting' ] )->group( function () {
 	Route::get( '/', 'HomeController@index' )->name( 'homepage' );
-	Route::get( '/lien-he', 'LienHeController@index' )->name( 'lienhepage' );
 	Route::get( '/tin-tuc', 'NewDetailController@index' )->name( 'tintuc' );
+
+	Route::get( '/rigistration', 'RigistrationController@index' )->name( 'rigistrations-index' );
+	Route::post( '/rigistration', 'RigistrationController@store' )->name( 'rigistrations-store' );
 
 	Route::get( '/logout', 'LoginController@logout' )->name( 'logout' );
 
@@ -35,6 +37,7 @@ Route::middleware( [ 'currency', 'setting' ] )->group( function () {
 Route::group( [ 'prefix' => 'dashboard', 'middleware' => 'auth', 'namespace' => 'Admin' ], function () {
 	Route::get( '/', 'DashboardControler@index' )->name( 'getDashboard' );
 	Route::resource( 'slide', 'SlideController' );
+	Route::resource( 'partner', 'PartnerController' );
 	
 	// // Hotel group
 	Route::prefix( 'hotel' )->group( function () {
@@ -82,11 +85,20 @@ Route::group( [ 'prefix' => 'dashboard', 'middleware' => 'auth', 'namespace' => 
 		Route::resource( 'booking', 'BookController' );
 	} );
 
+	Route::prefix( 'product' )->group( function () {
+		Route::resource( 'product', 'ProductController' );
+		Route::resource( 'application-form', 'ApplicationFormController' );
+		Route::resource( 'document', 'DocumentController' );
+		Route::resource( 'data-product', 'DataProductController' );
+		
+	} );
+
 	// Design group
 	Route::prefix( 'design' )->group( function () {
 		Route::resource( 'layout', 'LayoutController' );
 		Route::resource( 'module', 'ModuleController' );
 	} );
+	
 
 	// Page
 	Route::resource( 'page', 'PageController' );

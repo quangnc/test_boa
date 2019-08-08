@@ -13,8 +13,13 @@ class CreatePartnerTable extends Migration
      */
     public function up()
     {
-        Schema::create('partner', function (Blueprint $table) {
+        Schema::create('partners', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name', 255);
+            $table->string('image', 255);
+            $table->string('url', 255);
+            $table->tinyInteger('status')->length(1)->unsigned();
+            $table->integer('sort_order')->length(3)->unsigned();
             $table->timestamps();
         });
     }
@@ -26,6 +31,6 @@ class CreatePartnerTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('partner');
+        Schema::dropIfExists('partners');
     }
 }

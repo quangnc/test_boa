@@ -25,180 +25,112 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8w2FynJ5BScWwNgz2vbRdFETpxSO5uvI&callback=initMap"
             async defer></script>
 @endpush
-
 @extends('layouts.app')
-
 @section('content')
 
-    <div id="gdlr-header-substitute">
+<div id="main-content">
+    <h1 class="title" id="page-title">
+        Liên hệ			
+    </h1>
+    <div id="navigation">
+        <div class="tabs-secondary clearfix">
+            <ul class="tabs secondary"></ul>
+        </div>
     </div>
-
-    {{--Content Top--}}
-    @include('layouts.content_top')
-
-    <div class="content-wrapper">
-        <div class="gdlr-content">
-
-            <!-- Above Sidebar Section-->
-
-            <!-- Sidebar With Content Section-->
-            <div class="with-sidebar-wrapper">
-                <div class="with-sidebar-container container">
-                    <div class="with-sidebar-left twelve columns">
-                        <div class="with-sidebar-content eight columns">
-                            <section id="content-section-1">
-                                <div class="section-container container">
-                                    <div class="gdlr-item gdlr-content-item" style="margin-bottom: 60px;">
-                                        <p>
-                                        <div class="clear"></div>
-                                        <div class="gdlr-space" style="margin-top: -22px;"></div>
-                                        <h5 class="gdlr-heading-shortcode " style="font-weight: bold;">
-                                            @lang('home.please_fulfil_the')
-                                        </h5>
-                                        <div class="clear"></div>
-                                        <div class="gdlr-space" style="margin-top: 25px;"></div>
-                                        <div role="form" class="wpcf7 form-info" id="wpcf7-f4-o1" lang="en-US" dir="ltr">
-                                            <div class="screen-reader-response"></div>
-                                            <form class="quform" action="{{ route('add-contact') }}" method="post">
-                                                {{ csrf_field() }}
-
-                                                @if (isset($success))
-                                                    <div class="alert alert-success">{{ $success }} </div>
-                                                @endif
-                                                <div class="quform-elements">
-                                                    <div class="quform-element">
-                                                        <p>@lang('home.your_name')
-                                                            <br>
-                                                            <span class="wpcf7-form-control-wrap your-name">
-                                                                <input id="name" type="text" name="name" size="40"
-                                                                       class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                                                       aria-required="true" aria-invalid="false"
-                                                                       value="{{ old('name') }}"
-                                                                >
-                                                        @if($errors->has('name') && !old("name"))
-                                                            <p style="color:red">{{$errors->first('name')}}</p>
-                                                            @endif
-                                                            </span>
-                                                            </p>
-                                                    </div>
-                                                    <div class="quform-element">
-                                                        <p>@lang('home.your_email')
-                                                            <br>
-                                                            <span class="wpcf7-form-control-wrap your-email">
-                                                                <input id="email" type="text" name="email" size="40"
-                                                                       class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
-                                                                       aria-required="true" aria-invalid="false"
-                                                                       value="{{ old('email') }}"
-                                                                >
-                                                            @if($errors->has('email') && !old("email"))
-                                                                <p style="color:red">{{$errors->first('email')}}</p>
-                                                            @endif
-                                                            </span>
-                                                            </p>
-                                                    </div>
-                                                    <div class="quform-element">
-                                                        <p>Your Message
-                                                            <br>
-                                                            <span class="wpcf7-form-control-wrap your-message">
-                                                                <textarea id="message" name="message" cols="40"
-                                                                          rows="10"
-                                                                          class="wpcf7-form-control wpcf7-textarea"
-                                                                          aria-invalid="false">{{ old('message') }}</textarea>
-                                                        @if($errors->has('message') && !old("message"))
-                                                            <p style="color:red">{{$errors->first('message')}}</p>
-                                                            @endif
-                                                            </span>
-                                                            </p>
-                                                    </div>
-                                                    <p>
-                                                        <!-- Begin Submit button -->
-                                                    <div class="quform-submit">
-                                                        <div class="quform-submit-inner">
-                                                            <button type="submit" class="submit-button">
-                                                                <span><em>@lang('home.send')</em></span></button>
-                                                        </div>
-                                                        <div class="quform-loading-wrap"><span
-                                                                    class="quform-loading"></span></div>
-                                                    </div>
-                                                    </p>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </section>
-                        </div>
-
-                        <div class="gdlr-sidebar gdlr-left-sidebar four columns">
-                            <div class="gdlr-item-start-content sidebar-left-item">
-                                <div id="text-6" class="widget widget_text gdlr-item gdlr-widget">
-                                    <h3 class="gdlr-widget-title">@lang('home.contact_us')</h3>
-                                    <div class="clear"></div>
-                                    <div class="textwidget">{{ $setting['contact_note'] }}</div>
-                                </div>
-                                <div id="text-7" class="widget widget_text gdlr-item gdlr-widget">
-                                    <h3 class="gdlr-widget-title">@lang('home.contact_information')</h3>
-                                    <div class="clear"></div>
-                                    <div class="textwidget">
-                                        <p><i class="gdlr-icon fa fa-map-marker"
-                                              style="color: #444444; font-size: 16px; "></i>{{ $setting['address'] }}
-                                        </p>
-                                        <p><i class="gdlr-icon fa fa-phone"
-                                              style="color: #444444; font-size: 16px; "></i> {{ $setting['phone'] }}</p>
-                                        <p><i class="gdlr-icon fa fa-envelope"
-                                              style="color: #444444; font-size: 16px; "></i>{{ $setting['email'] }}</p>
-                                        <p><i class="gdlr-icon fa fa-clock-o"
-                                              style="color: #444444; font-size: 16px; "></i> {{ $setting['open_time'] }}
-                                        </p>
-                                    </div>
-                                </div>
-                                <div id="text-8" class="widget widget_text gdlr-item gdlr-widget">
-                                    <h3 class="gdlr-widget-title">Social Media</h3>
-                                    <div class="clear"></div>
-                                    <div class="textwidget">
-                                        <a href="{{ $setting['facebook'] }}">
-                                            <i class="gdlr-icon fa fa-facebook"
-                                               style="color: #444444; font-size: 28px; "></i>
-                                        </a>
-                                        <a href="{{ $setting['twitter'] }}">
-                                            <i class="gdlr-icon fa fa-twitter"
-                                               style="color: #444444; font-size: 28px; "></i>
-                                        </a>
-                                        <a href="{{ $setting['google'] }}">
-                                            <i class="gdlr-icon fa fa-google"
-                                               style="color: #444444; font-size: 28px; "></i>
-                                        </a>
-                                    </div>
+    <div class="region region-content">
+        <div id="block-system-main" class="block block-system">
+            <div class="content">
+                <div id="node-49" class="node node-webform clearfix">
+                <div class="content">
+                    <div class="group-khung field-group-div uk-grid">
+                        <div class="group-khung1 field-group-div uk-width-1-1 uk-width-medium-5-10">
+                            <div class="field field-name-field-webform-noidung field-type-text-long field-label-hidden">
+                            <div class="field-items">
+                                <div class="field-item even"><strong>VĂN PHÒNG CÔNG NHẬN CHẤT LƯỢNG&nbsp;</strong><br>
+                                    <br>
+                                    <strong>Hà Nội:&nbsp;</strong><br style="color: rgb(0, 0, 0); font-family: arial, Tahoma, &quot;Times New Roman&quot;; font-size: 12px; line-height: normal; white-space: nowrap;">
+                                    Số 8 Hoàng Quốc Việt, Quận Cầu Giấy, Hà Nội&nbsp;<br>
+                                    Tel: 024.3791 1552 &nbsp; Fax: 024.3791 1551&nbsp;<br>
+                                    Email:&nbsp;<a href="mailto:vpcongnhan@boa.gov.vn">vpcongnhan@boa.gov.vn</a>&nbsp;<br style="color: rgb(0, 0, 0); font-family: arial, Tahoma, &quot;Times New Roman&quot;; font-size: 12px; line-height: normal; white-space: nowrap;">
+                                    <br style="color: rgb(0, 0, 0); font-family: arial, Tahoma, &quot;Times New Roman&quot;; font-size: 12px; line-height: normal; white-space: nowrap;">
+                                    <strong>Tp. Hồ Chí Minh:&nbsp;</strong><br style="color: rgb(0, 0, 0); font-family: arial, Tahoma, &quot;Times New Roman&quot;; font-size: 12px; line-height: normal; white-space: nowrap;">
+                                    P.203, Nhà B, 31 Hàn Thuyên, Quận 1, TP. Hồ Chí Minh<br>
+                                    Tel: 028.3827 0482 &nbsp; Fax: 028.3827 0481&nbsp;<br>
+                                    Email:&nbsp;<a href="mailto:vpcongnhan.hcm@boa.gov.vn">vpcongnhan.hcm@boa.gov.vn</a><br>
+                                    <iframe allowfullscreen="" frameborder="0" height="350" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.6202029740916!2d105.80061831450512!3d21.047877385988002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab22d8cdee8b%3A0x2c7451294843e09e!2zOCBIb8OgbmcgUXXhu5FjIFZp4buHdCwgTmdoxKlhIMSQw7QsIEPhuqd1IEdp4bqleSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1483518827166" style="border:0" width="100%"></iframe>
                                 </div>
                             </div>
+                            </div>
                         </div>
-                        <div class="clear"></div>
-                    </div>
+                        <div class="group-khung2 field-group-div uk-width-1-1 uk-width-medium-5-10">
+                            <form class="webform-client-form webform-client-form-49" enctype="multipart/form-data" action="{{ route('add-contact') }}" method="post" id="webform-client-form-49" accept-charset="UTF-8">
+                            {{ csrf_field() }}
 
-                    <div class="clear"></div>
+                            @if (isset($success))
+                                <div class="alert alert-success">{{ $success }} </div>
+                            @endif
+                            <div>
+                                <div class="form-item webform-component webform-component-textfield webform-component--ho-ten">
+                                    <label class="element-invisible" for="edit-submitted-ho-ten">Họ tên <span class="form-required" title="Trường dữ liệu này là bắt buộc.">*</span></label>
+                                    <input 
+                                        required="required" 
+                                        placeholder="Họ tên" 
+                                        type="text" 
+                                        id="edit-submitted-ho-ten" 
+                                        name="name" 
+                                        value="{{ old('name') }}" 
+                                        size="60" maxlength="128" 
+                                        class="form-text required">
+                                    @if($errors->has('name') && !old("name"))
+                                        <p style="color:red">{{$errors->first('name')}}</p>
+                                    @endif
+                                </div>
+                                <div class="form-item webform-component webform-component-textfield webform-component--dia-chi">
+                                    <label class="element-invisible" for="edit-submitted-dia-chi">Địa chỉ <span class="form-required" title="Trường dữ liệu này là bắt buộc.">*</span></label>
+                                    <input required="required" placeholder="Địa chỉ" type="text" id="edit-submitted-dia-chi" name="address" value="{{ old('address') }}" size="60" maxlength="128" class="form-text required">
+                                    @if($errors->has('address') && !old("address"))
+                                        <p style="color:red">{{$errors->first('address')}}</p>
+                                    @endif
+                                </div>
+                                <div class="form-item webform-component webform-component-textfield webform-component--dien-thoai">
+                                    <label class="element-invisible" for="edit-submitted-dien-thoai">Điện thoại </label>
+                                    <input placeholder="Điện thoại" type="text" id="edit-submitted-dien-thoai" name="phone" value="{{ old('phone') }}" size="60" maxlength="128" class="form-text">
+                                    @if($errors->has('phone') && !old("phone"))
+                                        <p style="color:red">{{$errors->first('phone')}}</p>
+                                    @endif
+                                </div>
+                                <div class="form-item webform-component webform-component-email webform-component--email">
+                                    <label class="element-invisible" for="edit-submitted-email">Email <span class="form-required" title="Trường dữ liệu này là bắt buộc.">*</span></label>
+                                    <input required="required" class="email form-text form-email required" placeholder="Email" type="email" value="{{ old('email') }}" id="edit-submitted-email" name="email" size="60">
+                                    @if($errors->has('email') && !old("email"))
+                                        <p style="color:red">{{$errors->first('email')}}</p>
+                                    @endif
+                                </div>
+                                <div class="form-item webform-component webform-component-textarea webform-component--noi-dung">
+                                    <label class="element-invisible" for="edit-submitted-noi-dung">Nội dung <span class="form-required" title="Trường dữ liệu này là bắt buộc.">*</span></label>
+                                    <div class="form-textarea-wrapper resizable textarea-processed resizable-textarea">
+                                        <textarea required="required" placeholder="Nội dung" id="edit-submitted-noi-dung" name="message" cols="60" rows="5" class="form-textarea required">{{ old('message') }}</textarea>
+                                        <div class="grippie"></div>
+                                        @if($errors->has('message') && !old("message"))
+                                            <p style="color:red">{{$errors->first('message')}}</p>
+                                        @endif
+                                    </div>
+                                </div>
+                                <input type="hidden" name="details[sid]">
+                                <input type="hidden" name="details[page_num]" value="1">
+                                <input type="hidden" name="details[page_count]" value="1">
+                                <input type="hidden" name="details[finished]" value="0">
+                                <input type="hidden" name="form_build_id" value="form-tiSm0VVhMDUyxZAOjdygad5LWQOXeTyhmth9L4mzx_8">
+                                <input type="hidden" name="form_id" value="webform_client_form_49">
+                                <div class="form-actions"><input class="webform-submit button-primary form-submit" type="submit" name="op" value="Gửi yêu cầu"></div>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
                 </div>
             </div>
-
-            <!-- Below Sidebar Section-->
-            <div class="below-sidebar-wrapper">
-                <section id="content-section-2">
-                    <div class="gdlr-full-size-wrapper gdlr-show-all"
-                         style="padding-bottom: 0px;  background-color: #ffffff; ">
-                        <div class="gdlr-item gdlr-content-item" style="margin-bottom: 0px;">
-                            <div class="wpgmp_map_container wpgmp-map-1" rel="map1">
-                                <div class="wpgmp_map " style="width:100%; height:450px;" id="map1"></div>
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="clear"></div>
-                </section>
-            </div>
-
         </div>
-        <!-- gdlr-content -->
-        <div class="clear"></div>
     </div>
+</div>
 @endsection

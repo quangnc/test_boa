@@ -86,8 +86,9 @@ class BlogPostController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function store( Request $request ) {
+		// dd($request->all());
 		$request->validate( [
-			// 'blog_post_descriptions.*.*' => 'required',
+			'blog_post_descriptions.*.*' => 'required',
 			'blog_post.*'              => 'required',
 			'blog_tag.*'              => 'required',
 
@@ -165,7 +166,7 @@ class BlogPostController extends Controller {
 	 */
 	public function update( Request $request, $id ) {
 		$request->validate( [
-			// 'blog_post_descriptions.*.*' => 'required',
+			'blog_post_descriptions.*.*' => 'required',
 			'blog_post.*'              => 'required',
 			'blog_tag.*'              => 'required',
 

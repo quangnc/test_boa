@@ -2,7 +2,7 @@
 @section('title', 'Dashboard')
 @section('content')
 
-<section class="content">
+{{-- <section class="content">
     <div class="container-fluid">
       <!-- Small boxes (Stat box) -->
       <div class="row">
@@ -149,6 +149,6 @@
         </section>
       </div>
     </div>
-  </section>
+  </section> --}}
 
 @endsection

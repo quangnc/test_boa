@@ -11,7 +11,8 @@ use Mapper;
 class ContactController extends Controller
 {
     public function contact() {
-	    return view('frontpage.contact-us');
+        $data['pageClass'] = "html not-front not-logged-in no-sidebars page-node page-node- page-node-49 node-type-webform i18n-vi adminimal-theme jquery-once-1-processed mq-desktop";
+	    return view('frontpage.contact-us', compact('data'));
     }
 
     public function addContact(Request $request)

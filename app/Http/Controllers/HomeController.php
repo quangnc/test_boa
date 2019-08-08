@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App;
-
+use App\Models\Slide;
+use App\Models\BlogPost;
+use App\Repositories\Read\ConfigSetting;
 class HomeController extends Controller
 {
+    use ConfigSetting;
     /**
      * Create a new controller instance.
      *
@@ -25,7 +28,28 @@ class HomeController extends Controller
     public function index()
     {
         $data['pageClass'] = "html front not-logged-in no-sidebars page-node i18n-vi adminimal-theme ";
-        return view('frontpage.home', compact('data'));
+        $slides = Slide::all()->take(3);
+        $data = [];
+        $blogs = BlogPost::with('blog_post_descriptions', 'blog_categories')->get();
+        if ( $blogs) {
+            foreach($blogs as $blog) {
+                $blogCate = $blog->blog_categories->blog_category_descriptions()->where('language_id', config('app.language', $this->adminLanguage()))->first();
+                $blogPosts =  BlogPost::where('blog_category_id', $blogCate->blog_category_id)->with(['blog_post_descriptions' => function ($query) {
+                        $query->where('language_id', config('app.language', $this->adminLanguage()));
+                    }])->orderBy('created_at', 'desc')->take(2)->get();
+                $blogName = "";
+                if($blogPosts) {
+                    foreach($blogPosts as $blogPost) {
+                        $blogName = $blogPost->blog_post_descriptions()->first();
+                    }
+                }
+                $data[] = array(
+                    'blogCateName'         => $blogCate->name,
+                    'blogPost'     =>    $blogName !== "" ? $blogName->name : '',
+                );
+            }
+        }
+        return view('frontpage.home', compact('data', 'slides', 'data'));
     }
 
     public function contact() {
