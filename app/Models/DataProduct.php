@@ -15,8 +15,8 @@ class DataProduct extends Model
         return $this->hasMany( 'App\Models\DataProductDescription', 'data_product_id' );
     }
 
-    // public function blog_categories()
-    // {
-    //     return $this->hasOne( 'App\Models\BlogCategory', 'blog_category_id', 'blog_category_id' );
-    // }
+    public function product()
+    {
+        return $this->belongsTo('App\Models\Product', 'product_id');
+    }
 }

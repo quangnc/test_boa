@@ -14,10 +14,11 @@ class CreateDataProductDescriptionTable extends Migration
     public function up()
     {
         Schema::create('data_product_description', function (Blueprint $table) {
-            $table->integer('post_id')->length(11)->unsigned();
+            $table->integer('data_product_id')->length(11)->unsigned();
             $table->integer('language_id')->length(11)->unsigned();
             $table->string('name', 255);
             $table->string('vacis', 255);
+            $table->string('organization', 255);
             $table->text('file')->nullable();
             $table->string('field', 255);
             $table->string('city', 255);

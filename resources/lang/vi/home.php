@@ -53,5 +53,5 @@ return [
     'subtotal' => 'Subtotal',
     'action' => 'Hành động',
     'submit' => 'Tổng số',
-    'customer_info' => 'Thông tin khách hàng'
+    'customer_info' => 'Thông tin khách hàng',
 ];

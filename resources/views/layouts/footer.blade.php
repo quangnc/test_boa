@@ -10,7 +10,7 @@
                                     <div class="content">
                                         <div class="field field-name-field-khoind-noidung field-type-text-long field-label-hidden">
                                             <div class="field-items">
-                                                <div class="field-item even">© 2016 by BoA. All right reserved</div>
+                                                <div class="field-item even">© 2019 by VACI. All right reserved</div>
                                             </div>
                                         </div>
                                     </div>

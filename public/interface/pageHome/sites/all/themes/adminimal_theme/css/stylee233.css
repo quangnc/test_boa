@@ -77,7 +77,7 @@ border-radius: 50%;
   background: #1374d3 ;
   border: 2px solid #4e98cb;
   margin-bottom: 6px;
-  padding: 7px;
+  padding: 7px 5px;
   overflow: hidden;
   color: #fff;
 }
@@ -106,10 +106,9 @@ text-align: center;
 #block-block-7 h2.hotline {
 color: #fe2b34;
   font-weight: bold;
-  font-size: 20px;
-  margin-top: 15px;
+  font-size: 18px;
+  margin-top: 10px;
   display: block;
-  margin-bottom: 5px;
 }
 
 

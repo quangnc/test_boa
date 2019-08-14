@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App;
 use App\Models\Slide;
 use App\Models\BlogPost;
+use App\Models\Partner;
+use App\Models\Support;
 use App\Repositories\Read\ConfigSetting;
 class HomeController extends Controller
 {
@@ -29,6 +31,10 @@ class HomeController extends Controller
     {
         $data['pageClass'] = "html front not-logged-in no-sidebars page-node i18n-vi adminimal-theme ";
         $slides = Slide::all()->take(3);
+        $partners = Partner::all()->take(5);
+        $supports = Support::with(['support_descriptions' => function ($query) {
+            $query->where('language_id', config('app.language', $this->adminLanguage()));
+        }])->orderBy('created_at', 'desc')->take(2)->get();
         $data = [];
         $blogs = BlogPost::with('blog_post_descriptions', 'blog_categories')->get();
         if ( $blogs) {
@@ -44,12 +50,12 @@ class HomeController extends Controller
                     }
                 }
                 $data[] = array(
-                    'blogCateName'         => $blogCate->name,
+                    'blogCateName' => $blogCate->name,
                     'blogPost'     =>    $blogName !== "" ? $blogName->name : '',
                 );
             }
         }
-        return view('frontpage.home', compact('data', 'slides', 'data'));
+        return view('frontpage.home', compact('data', 'slides', 'partners', 'supports'));
     }
 
     public function contact() {

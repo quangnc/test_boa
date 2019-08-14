@@ -41,6 +41,12 @@
                         <p>Slide</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('support.index')  }}" class="nav-link">
+                        <i class="nav-icon fa fa-envelope"></i>
+                        <p>Support</p>
+                    </a>
+                </li>
                 {{-- <li class="nav-item">
                     <a href="{{ route('page.index')  }}" class="nav-link">
                         <i class="nav-icon fa fa-edit"></i>
@@ -110,7 +116,7 @@
 
                 
 
-                <li class="nav-header">DESIGN</li>
+                {{-- <li class="nav-header">DESIGN</li>
                 <li class="nav-item">
                     <a href="{{ route('module.index')  }}" class="nav-link">
                         <i class="nav-icon fa fa-th-list"></i>
@@ -122,7 +128,7 @@
                         <i class="nav-icon fa fa-desktop"></i>
                         <p>Layout</p>
                     </a>
-                </li>
+                </li>    --}}
                 <li class="nav-header">SYSTEM</li>
                 <li class="nav-item">
                     <a href="{{ route('setting.index')  }}" class="nav-link">

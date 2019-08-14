@@ -23,14 +23,6 @@
 </div>
 
 <div class="form-group">
-    <label for="open_time">@lang('home.open_time')</label>
-    <input type="text" class="form-control" id="open_time" placeholder="Open Time"
-           name="setting[open_time]"
-           value="{{ isset($setting['open_time']) ? $setting['open_time'] : '' }}"
-    >
-</div>
-
-<div class="form-group">
     <label for="contact_note">@lang('home.contact_us')</label>
     <textarea
             class="form-control"

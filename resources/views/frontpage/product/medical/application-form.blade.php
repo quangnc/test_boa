@@ -1,0 +1,73 @@
+@extends('layouts.app')
+@section('content')
+<div id="main-content">
+   <div id="navigation">
+      <div class="tabs-secondary clearfix">
+         <ul class="tabs secondary"></ul>
+      </div>
+   </div>
+   <div class="region region-content">
+      <div id="block-system-main" class="block block-system">
+            <h1 class="title" id="page-title"> Biểu mẫu đăng ký phòng thí nghiệm y tế </h1>
+         <div class="content">
+            <div class="view view-danh-sach-bieu-mau view-id-danh_sach_bieu_mau view-display-id-page view-dom-id-edecb78fdceaa230107aa04c66d9f794">
+               <div class="view-content ">
+                  <table class="views-table cols-4">
+                     <thead>
+                        <tr>
+                           <th class="views-field views-field-counter">
+                              STT          
+                           </th>
+                           <th class="views-field views-field-nothing">
+                              Tên tài liệu          
+                           </th>
+                           <th class="views-field views-field-created">
+                              Phiên bản          
+                           </th>
+                           <th class="views-field views-field-php">
+                              Tải về          
+                           </th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        @isset($applicationForm)
+                           <?php $i = 0; ?>
+                           @foreach ($applicationForm as $item)
+                              <?php 
+                                 $i++;
+                              ?>
+                              <tr class="odd views-row-first">
+                                 <td class="views-field views-field-counter">
+                                    {{ $i }}       
+                                 </td>
+                                 <td class="views-field views-field-nothing">
+                                 <div class="bieumau">{{ $item->application_form_descriptions()->first()->name }}</div>
+                                 </td>
+                                 <td class="views-field views-field-created">
+                                   {{ Carbon\Carbon::parse($item->created_at)->format('d/m/Y') }}       
+                                 </td>
+                                 <td class="views-field views-field-php">
+                                    <div class="bieumau">
+                                       <i class="uk-icon-save"></i>
+                                       {{-- <a href="http://www.boa.gov.vn/sites/default/files/af_14.02_bao_cao_hdkp_2010.doc"> Dowload</a></div> --}}
+                                       <a href="#"> Dowload</a></div>
+                                    <div id="my-id" class="uk-modal">
+                                       <div class="uk-modal-dialog">
+                                          <a class="uk-modal-close uk-close"></a>
+                                          Xin vui lòng liên lạc Vaci
+                                       </div>
+                                    </div>
+                                 </td>
+                              </tr>
+                           @endforeach
+                        @endisset
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+@include('frontpage.product.phong-thi-nghiem.sidebar-right');
+@endsection

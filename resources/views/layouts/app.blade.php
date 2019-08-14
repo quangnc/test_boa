@@ -23,14 +23,12 @@
           content="width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no, initial-scale=1"/>
     <meta name="robots" content="follow, index"/>
     <meta name="generator" content="Vinno JSC"/>
-    <link rel="canonical" href="vi.html"/>
-    <link rel="shortlink" href="vi.html"/>
     <meta name="revisit-after" content="3 ngày"/>
-    <meta property="og:site_name" content="Văn phòng Công nhận Chất lượng (BoA)"/>
+    <meta property="og:site_name" content="Văn phòng Công nhận Chất lượng (Vaci)"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="vi.html"/>
-    <meta property="og:title" content="Văn phòng Công nhận Chất lượng (BoA)"/>
-    <title>Văn phòng Công nhận Chất lượng (BoA)</title>
+    <meta property="og:url" content="vaci.html"/>
+    <meta property="og:title" content="Văn phòng Công nhận Chất lượng (Vaci)"/>
+    <title>Văn phòng Công nhận Chất lượng (Vaci)</title>
     
     <link type="text/css" rel="stylesheet" href="{{ asset('interface/pageHome/modules/system/system.basee233.css?puenjb') }}" media="all"/>
     <link type="text/css" rel="stylesheet" href="{{ asset('interface/pageHome/modules/system/system.menuse233.css?puenjb') }}" media="all"/>

@@ -22,8 +22,8 @@
             });
         }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8w2FynJ5BScWwNgz2vbRdFETpxSO5uvI&callback=initMap"
-            async defer></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEhdtc_8SQLSUO3rUoHzNOmo49oTcb_kU&callback=initMap"
+    async defer></script>
 @endpush
 @extends('layouts.app')
 @section('content')
@@ -45,27 +45,25 @@
                     <div class="group-khung field-group-div uk-grid">
                         <div class="group-khung1 field-group-div uk-width-1-1 uk-width-medium-5-10">
                             <div class="field field-name-field-webform-noidung field-type-text-long field-label-hidden">
-                            <div class="field-items">
-                                <div class="field-item even"><strong>VĂN PHÒNG CÔNG NHẬN CHẤT LƯỢNG&nbsp;</strong><br>
-                                    <br>
-                                    <strong>Hà Nội:&nbsp;</strong><br style="color: rgb(0, 0, 0); font-family: arial, Tahoma, &quot;Times New Roman&quot;; font-size: 12px; line-height: normal; white-space: nowrap;">
-                                    Số 8 Hoàng Quốc Việt, Quận Cầu Giấy, Hà Nội&nbsp;<br>
-                                    Tel: 024.3791 1552 &nbsp; Fax: 024.3791 1551&nbsp;<br>
-                                    Email:&nbsp;<a href="mailto:vpcongnhan@boa.gov.vn">vpcongnhan@boa.gov.vn</a>&nbsp;<br style="color: rgb(0, 0, 0); font-family: arial, Tahoma, &quot;Times New Roman&quot;; font-size: 12px; line-height: normal; white-space: nowrap;">
-                                    <br style="color: rgb(0, 0, 0); font-family: arial, Tahoma, &quot;Times New Roman&quot;; font-size: 12px; line-height: normal; white-space: nowrap;">
-                                    <strong>Tp. Hồ Chí Minh:&nbsp;</strong><br style="color: rgb(0, 0, 0); font-family: arial, Tahoma, &quot;Times New Roman&quot;; font-size: 12px; line-height: normal; white-space: nowrap;">
-                                    P.203, Nhà B, 31 Hàn Thuyên, Quận 1, TP. Hồ Chí Minh<br>
-                                    Tel: 028.3827 0482 &nbsp; Fax: 028.3827 0481&nbsp;<br>
-                                    Email:&nbsp;<a href="mailto:vpcongnhan.hcm@boa.gov.vn">vpcongnhan.hcm@boa.gov.vn</a><br>
-                                    <iframe allowfullscreen="" frameborder="0" height="350" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.6202029740916!2d105.80061831450512!3d21.047877385988002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab22d8cdee8b%3A0x2c7451294843e09e!2zOCBIb8OgbmcgUXXhu5FjIFZp4buHdCwgTmdoxKlhIMSQw7QsIEPhuqd1IEdp4bqleSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1483518827166" style="border:0" width="100%"></iframe>
+                                <div class="field-items">
+                                    <div class="field-item even"><strong>VĂN PHÒNG CÔNG NHẬN CHẤT LƯỢNG&nbsp;</strong><br>
+                                        <br>
+                                        <strong>Hà Nội:&nbsp;</strong><br style="color: rgb(0, 0, 0); font-family: arial, Tahoma, &quot;Times New Roman&quot;; font-size: 12px; line-height: normal; white-space: nowrap;">
+                                        Số 8 Hoàng Quốc Việt, Quận Cầu Giấy, Hà Nội&nbsp;<br>
+                                        Tel: 024.3791 1552 &nbsp; Fax: 024.3791 1551&nbsp;<br>
+                                        Email:&nbsp;<a href="mailto:vpcongnhan@boa.gov.vn">vpcongnhan@boa.gov.vn</a>&nbsp;<br style="color: rgb(0, 0, 0); font-family: arial, Tahoma, &quot;Times New Roman&quot;; font-size: 12px; line-height: normal; white-space: nowrap;">
+                                    </div>
+                                    <div class="gdlr-item gdlr-content-item" style="margin-bottom: 0px;">
+                                            <div class="wpgmp_map_container wpgmp-map-1" rel="map1">
+                                                <div class="wpgmp_map " style="width:100%; height:450px;" id="map1"></div>
+                                            </div>
+                                        </div>
                                 </div>
-                            </div>
                             </div>
                         </div>
                         <div class="group-khung2 field-group-div uk-width-1-1 uk-width-medium-5-10">
                             <form class="webform-client-form webform-client-form-49" enctype="multipart/form-data" action="{{ route('add-contact') }}" method="post" id="webform-client-form-49" accept-charset="UTF-8">
                             {{ csrf_field() }}
-
                             @if (isset($success))
                                 <div class="alert alert-success">{{ $success }} </div>
                             @endif

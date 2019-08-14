@@ -24,7 +24,7 @@ class LanguageTableSeeder extends Seeder
 			    'name' => 'English',
 			    'code' => 'en',
 			    'locate' => 'en-US,en_US.UTF-8,en_US,en-gb,english',
-			    'image' => 'vn.png',
+			    'image' => 'en.png',
 			    'sort_order' => 2,
 			    'status' => 0
 		    ]

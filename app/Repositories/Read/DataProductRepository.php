@@ -57,7 +57,6 @@ class DataProductRepository implements CRUDInterface {
 		}
 		$data['blog_post'] = $blog_post;
         $data['blog_post_descriptions'] = $blog_post_descriptions;
-        $data['blog_tag'] =  $blog_post->blog_tags()->first();
 		return $data;
     }
 

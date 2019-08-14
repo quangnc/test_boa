@@ -17,5 +17,10 @@ class Product extends Model
     {
         return $this->hasMany( 'App\Models\ApplicationsForm', 'product_id' );
     }
+
+    public function data_product()
+    {
+        return $this->hasMany( 'App\Models\DataProduct', 'product_id' );
+    }
     
 }

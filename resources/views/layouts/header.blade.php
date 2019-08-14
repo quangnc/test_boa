@@ -2,7 +2,9 @@
     <div class="region region-content-before">
         <div id="block-block-1" class="block block-block">
             <div class="content">
-                <div class="logo"><a href="index.html"><img src="{{ asset('interface/pageHome/images/boaweb/logo.png ') }}"/></a></div>
+                <div class="logo"><a href="index.html">
+                    <img src="{{ Storage::url($setting['logo']) }}" alt="{{ Storage::url($setting['logo']) }}"> 
+                </a></div>
                 <div class="ten_cty">VĂN PHÒNG CÔNG NHẬN CHẤT LƯỢNG</div>
             </div>
         </div>
@@ -15,10 +17,10 @@
                         <div class="content">
                             <ul class="nice-menu nice-menu-down nice-menu-menu-menu-chinh" id="nice-menu-1">
                             <li class="menu-649 menu-path-front first odd ">
-                                <a href="vi.html" title="" class="active">Trang chủ</a>
+                                <a href="{{ route('homepage') }}" title="" class="active">Trang chủ</a>
                             </li>
                             <li class="menu-650 menuparent  menu-path-front  even ">
-                                <a href="vi.html"
+                                <a href="{{ route('homepage') }}"
                                     title=""
                                     class="active">Giới
                                 thiệu</a>
@@ -37,22 +39,22 @@
                                         href="vi/ban-lanh-dao.html" title="">Ban lãnh đạo</a></li>
                                     <li class="menu-1131 menuparent  menu-path-front  odd last">
                                         <a
-                                        href="vi.html" title="" class="active">Công khai tài
+                                        href="{{ route('homepage') }}" title="" class="active">Công khai tài
                                         chính</a>
                                         <ul>
                                         <li class="menu-1132 menu-path-front first odd "><a
-                                            href="vi.html" title="" class="active">Dự toán</a>
+                                            href="{{ route('homepage') }}" title="" class="active">Dự toán</a>
                                         </li>
                                         <li class="menu-1133 menu-path-front  even "><a
-                                            href="vi.html" title="" class="active">Tình hình
+                                            href="{{ route('homepage') }}" title="" class="active">Tình hình
                                             thực hiện dự toán</a>
                                         </li>
                                         <li class="menu-1134 menu-path-front  odd "><a
-                                            href="vi.html" title="" class="active">Quyết
+                                            href="{{ route('homepage') }}" title="" class="active">Quyết
                                             toán</a>
                                         </li>
                                         <li class="menu-1135 menu-path-front  even last"><a
-                                            href="vi.html" title="" class="active">Tổng hợp tình
+                                            href="{{ route('homepage') }}" title="" class="active">Tổng hợp tình
                                             hình công khai</a>
                                         </li>
                                         </ul>
@@ -90,7 +92,7 @@
                                 </ul>
                             </li>
                             <li class="menu-652 menuparent  menu-path-front  even ">
-                                <a href="vi.html"
+                                <a href="{{ route('homepage') }}"
                                     title=""
                                     class="active">Đào
                                 tạo</a>
@@ -115,7 +117,7 @@
                                 </ul>
                             </li>
                             <li class="menu-653 menuparent  menu-path-front  odd ">
-                                <a href="vi.html"
+                                <a href="{{ route('homepage') }}"
                                     title=""
                                     class="active">Thử
                                 nghiệm thành thạo</a>
@@ -129,7 +131,7 @@
                                         title="">Các tổ chức cung cấp dịch vụ PT</a></li>
                                 </ul>
                             </li>
-                            <li class="menu-654 menu-path-node-49  even last"><a href="vi/lien-he.html"
+                                <li class="menu-654 menu-path-node-49  even last"><a href="{{ route('contact') }}"
                                 title="">Liên hệ</a>
                             </li>
                             </ul>
@@ -141,10 +143,13 @@
                         <h2>Ngôn ngữ</h2>
                         <div class="content">
                             <ul class="language-switcher-locale-url">
-                            <li class="en first"><a href="en.html" class="language-link" xml:lang="en">English</a>
-                            </li>
-                            <li class="vi last active"><a href="vi.html" class="language-link active"
-                                xml:lang="vi">Tiếng Việt</a></li>
+                                @foreach($languages as $language)
+                                <li class="{{ $language->language_id == config('app.language', 2) ? 'active' : '' }}">
+                                    <a href="{{ route('set-language', $language->language_id) }}">
+                                        <img src="{{ asset('upload/images/language').'/'.$language->image }}" alt="{{$language->name}}" />
+                                    </a>
+                                </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -162,18 +167,18 @@
                         <h2>Menu chính</h2>
                         <div class="content">
                             <ul class="menu">
-                                <li class="first leaf"><a href="vi.html" title="" class="active">Trang
+                                <li class="first leaf"><a href="{{ route('homepage') }}" title="" class="active">Trang
                                    chủ</a>
                                 </li>
-                                <li class="collapsed"><a href="vi.html" title="" class="active">Giới
+                                <li class="collapsed"><a href="{{ route('homepage') }}" title="" class="active">Giới
                                    thiệu</a>
                                 </li>
                                 <li class="collapsed"><a href="vi/thong-tin-cong-nhan-0.html" title="">Thông
                                    tin công nhận</a>
                                 </li>
-                                <li class="collapsed"><a href="vi.html" title="" class="active">Đào tạo</a>
+                                <li class="collapsed"><a href="{{ route('homepage') }}" title="" class="active">Đào tạo</a>
                                 </li>
-                                <li class="collapsed"><a href="vi.html" title="" class="active">Thử nghiệm
+                                <li class="collapsed"><a href="{{ route('homepage') }}" title="" class="active">Thử nghiệm
                                    thành thạo</a>
                                 </li>
                                 <li class="last leaf"><a href="vi/lien-he.html" title="">Liên hệ</a></li>
