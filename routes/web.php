@@ -68,6 +68,9 @@ Route::middleware( [ 'currency', 'setting' ] )->group( function () {
 	
 	//new
 	Route::get( '/tin-tuc', 'LaboratoriesController@getList' )->name( 'news-getList' );
+	
+	Route::get( '/thong-tin/{id}', 'InformationController@detail' )->name( 'information' );
+	Route::get( '/thong-tin/tin-tuc/{id}/{cate}', 'InformationController@detailPost' )->name( 'detailPost' );
 
 	// Setting
 	Route::get( '/setting/language/{id}', 'SettingController@setLanguage' )->name( 'set-language' );
@@ -84,6 +87,12 @@ Route::group( [ 'prefix' => 'dashboard', 'middleware' => 'auth', 'namespace' => 
 	Route::prefix( 'blog' )->group( function () {
 		Route::resource( 'blog-post', 'BlogPostController' );
 		Route::resource( 'blog-category', 'BlogCategoryController' );
+	} );
+
+	// Menu group
+	Route::prefix( 'menu' )->group( function () {
+		Route::resource( 'menu', 'MenuController' );
+		Route::resource( 'cate-menu', 'CateMenuController' );
 	} );
 
 	Route::prefix( 'product' )->group( function () {

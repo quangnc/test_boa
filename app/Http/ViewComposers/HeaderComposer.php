@@ -6,10 +6,13 @@ use Illuminate\View\View;
 use Illuminate\Http\Request;
 use App\Models\Module;
 
+use App\Models\Menu;
+use App\Models\CateMenu;
+use App\Repositories\Read\ConfigSetting;
 class HeaderComposer {
 
 	protected $module;
-
+	use ConfigSetting;
 	public function __construct( Module $module ) {
 		$this->module = $module;
 	}
@@ -23,44 +26,26 @@ class HeaderComposer {
 	 */
 	public function compose( View $view ) {
 
-		$menus = array();
-
-		$megamenu = Module::where( 'code', 'megamenu' )->first();
-
-		if ( $megamenu ) {
-
-			$data = json_decode( $megamenu->toArray()['setting'] );
-
-			$dataSetting = json_decode( $data->megamenu );
-
-			if ( $dataSetting ) {
-				foreach ( $dataSetting as $key => $menu ) {
-
-					$children = array();
-
-					if ( count( $menu->children ) ) {
-
-						foreach ( $menu->children as $key => $child ) {
-
-							$children[] = array(
-								'title' => $child->title,
-								'href'  => "/",
-							);
-
-						}
-
-					}
-
-					$menus[] = array(
-						'title'    => $menu->title,
-						'href'     => $menu->data,
-						'children' => $children,
-					);
-
-				}
+		$menu = CateMenu::orderBy('sort_order', 'asc')->where('status', 0)->get();
+		if ($menu) {
+			foreach ($menu as $value) {
+				$menuCateDescription = $value->cate_menu_descriptions()->where('language_id', config('app.language', $this->adminLanguage()))->first();
+				$menuItem = $value->menu()->get();
+				
+				// foreach ($menuItem as $item) {
+				// 	dd( $item);
+				// 	$menuDescription[] = array(
+				// 		'item' => $item->menu_descriptions()->where('language_id', config('app.language', $this->adminLanguage()))->first(),
+				// 	);
+				// }
+				$menus[] = array(
+					'menuCate' => $value,
+					'menuCateDescription' => $menuCateDescription,
+					'menuChildren'     =>   $menuItem,
+					'language' => config('app.language', $this->adminLanguage())
+				);
 			}
 		}
-
 		$view->with( 'menus', $menus );
 	}
 }

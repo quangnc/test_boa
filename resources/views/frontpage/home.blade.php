@@ -219,11 +219,14 @@
                                                 <div class="views-row views-row-1 views-row-odd views-row-first">
                                                     <div class="views-field views-field-nothing">
                                                        <span class="field-content">
-                                                          <i class="uk-icon-chevron-circle-right"></i>
-                                                       <div class="tieude_daotao"><a href="vi/khoa-hoc-do-luong-hoc-ap-dung-trong-tieu-chuan-isoiec-17025-tai-ha-noi.html">{{ Helper::text_limit($dt['blogPost']) }}</a>
-                                                             <img src="{{ asset('interface/pageHome/images/boaweb/new.gif') }}" />
+                                                         <i class="uk-icon-chevron-circle-right"></i>
+                                                         <div class="tieude_daotao">
+                                                            <a href="{{ route('detailPost', [$dt['id'], $dt['blogCateId']]) }}">
+                                                               {{ Helper::text_limit($dt['blogPost']) }}
+                                                            </a>
+                                                            <img src="{{ asset('interface/pageHome/images/boaweb/new.gif') }}" />
                                                          </div>
-                                                       </span>
+                                                      </span>
                                                     </div>
                                                  </div>
                                              @endif
@@ -254,11 +257,14 @@
                                                             <div class="uk-grid uk-grid-small">
                                                                 <div class="uk-width-1-2 uk-width-medium-1-3 anh_news uk-flex uk-flex-center uk-flex-middle">
                                                                 <figure class="uk-overlay uk-overlay-hover">
-                                                                    <div class="uk-overlay-scale"><a href="vi/danh-sach-cac-chuc-duoc-cong-nhan-moi-thang-62019.html">
-                                                                        <img src="{{ asset('interface/pageHome/images/boaweb/logo.png') }}" alt="" /></a></div>
+                                                                    <div class="uk-overlay-scale">
+                                                                       <a href="{{ route('detailPost', [$dt['id'], $dt['blogCateId']]) }}">
+                                                                        <img src="{{ asset('interface/pageHome/images/boaweb/logo.png') }}" alt="" />
+                                                                     </a>
+                                                                  </div>
                                                                 </figure>
                                                                 </div>
-                                                                <div class="uk-width-1-2 uk-width-medium-2-3 tieude_news"><a href="vi/danh-sach-cac-chuc-duoc-cong-nhan-moi-thang-62019.html">{{ Helper::text_limit($dt['blogPost']) }}</a>
+                                                                <div class="uk-width-1-2 uk-width-medium-2-3 tieude_news"><a href="{{ route('detailPost', [$dt['id'], $dt['blogCateId']]) }}">{{ Helper::text_limit($dt['blogPost']) }}</a>
                                                                     <img src="{{ asset('interface/pageHome/images/boaweb/new.gif') }}" />
                                                                 </div>
                                                             </div>

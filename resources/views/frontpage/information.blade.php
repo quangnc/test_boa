@@ -6,8 +6,8 @@
        <div id="block-system-main" class="block block-system">
           <div class="content">
             <div id="node-13711" class="node node-dich-vu clearfix">
-                @isset($data['product'])
-                    {!! $data['product']->content !!}
+                @isset($menuDescription)
+                    {!! $menuDescription->content !!}
                 @endisset
             </div>
           </div>

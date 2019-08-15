@@ -231,15 +231,9 @@
                   </ul>
                </div>
             </div>
-            <script type="text/javascript">
-               document.getElementsByTagName('body')[0].className+=' page-views';
-               if(document.getElementById('page-title')){
-               document.getElementById('page-title').style.display = 'none';
-               }
-            </script>  
          </div>
       </div>
    </div>
 </div>
-@include('frontpage.product.phong-thi-nghiem.sidebar-right');
+@include('frontpage.sidebar-right');
 @endsection

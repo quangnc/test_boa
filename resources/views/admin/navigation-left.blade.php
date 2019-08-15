@@ -88,6 +88,20 @@
                     </a>
                 </li>
 
+                <li class="nav-header">Menu</li>
+                <li class="nav-item">
+                    <a href="{{ route('menu.index')  }}" class="nav-link">
+                        <i class="fa fa-circle-o nav-icon"></i>
+                        <p>Menu</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('cate-menu.index')  }}" class="nav-link">
+                        <i class="fa fa-circle-o nav-icon"></i>
+                        <p>Category Menu</p>
+                    </a>
+                </li>
+
                 <li class="nav-header">Products</li>
                 <li class="nav-item">
                     <a href="{{ route('product.index')  }}" class="nav-link">

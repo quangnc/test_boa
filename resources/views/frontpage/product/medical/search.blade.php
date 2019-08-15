@@ -235,5 +235,5 @@
       </div>
    </div>
 </div>
-@include('frontpage.product.phong-thi-nghiem.sidebar-right');
+@include('frontpage.sidebar-right');
 @endsection

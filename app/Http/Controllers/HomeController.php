@@ -49,9 +49,12 @@ class HomeController extends Controller
                         $blogName = $blogPost->blog_post_descriptions()->first();
                     }
                 }
+                
                 $data[] = array(
                     'blogCateName' => $blogCate->name,
+                    'blogCateId' => $blog->blog_category_id,
                     'blogPost'     =>    $blogName !== "" ? $blogName->name : '',
+                    'id' => $blog->post_id
                 );
             }
         }
