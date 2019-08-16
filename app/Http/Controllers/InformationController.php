@@ -7,6 +7,8 @@ use App;
 use App\Repositories\Read\ConfigSetting;
 use App\Models\Menu;
 use App\Models\BlogPost;
+use App\Models\BlogCategoryDescription;
+use App\Models\BlogCategory;
 
 class InformationController extends Controller
 {
@@ -38,11 +40,10 @@ class InformationController extends Controller
                 );
             }
         }
-        return view('frontpage.information', compact('data', 'menu', 'menuDescription'));
+        return view('frontpage.information.information', compact('data', 'menu', 'menuDescription'));
     }
 
     public function detailPost( $id, $cate)  {
-        
         $data['pageClass'] = "html not-front not-logged-in no-sidebars page-tim-kiem-thi-nghiem i18n-en adminimal-theme page-views page-views jquery-once-1-processed mq-desktop";
         $menuDescription = BlogPost::find($id)->blog_post_descriptions()->where('language_id', config('app.language', $this->adminLanguage()))
         ->first();
@@ -72,6 +73,76 @@ class InformationController extends Controller
                 );
             }
         }
-        return view('frontpage.information', compact('data', 'menuDescription'));
+        return view('frontpage.information.information', compact('data', 'menuDescription'));
+    }
+
+    public function getListNews()  {
+        // id new = 2
+        $data['pageClass'] = "html not-front not-logged-in no-sidebars page-tim-kiem-thi-nghiem i18n-en adminimal-theme page-views page-views jquery-once-1-processed mq-desktop";
+        $blogPostFind = BlogPost::where('blog_category_id', 2)->get();
+        $language = config('app.language', $this->adminLanguage());
+        $title = "Tin tức";
+        $blogs = BlogPost::with('blog_post_descriptions', 'blog_categories' )->get();
+        if ( $blogs) {
+            foreach($blogs as $blog) {
+                $blogCate = $blog
+                                ->blog_categories
+                                ->blog_category_descriptions()
+                                ->where('language_id', config('app.language', $this->adminLanguage()))
+                                ->first();
+                $blogPosts =  BlogPost::where('blog_category_id', $blogCate->blog_category_id)->with(['blog_post_descriptions' => function ($query) {
+                        $query->where('language_id', config('app.language', $this->adminLanguage()));
+                    }])->orderBy('created_at', 'desc')->take(2)->get();
+                $blogName = "";
+                if($blogPosts) {
+                    foreach($blogPosts as $blogPost) {
+                        $blogName = $blogPost->blog_post_descriptions()->first();
+                    }
+                }
+                $data['news'][] = array(
+                    'id' => $blog->post_id,
+                    'img' => $blog->image,
+                    'blogCateName' => $blogCate->name,
+                    'blogPost' =>    $blogName !== "" ? $blogName->name : '',
+
+                );
+            }
+        }
+        return view('frontpage.information.list-information', compact('title', 'data', 'menuDescription', 'blogPostFind', 'language'));
+    }
+
+    public function getListTrainning()  {
+        // id trainning = 1
+        $data['pageClass'] = "html not-front not-logged-in no-sidebars page-tim-kiem-thi-nghiem i18n-en adminimal-theme page-views page-views jquery-once-1-processed mq-desktop";
+        $blogPostFind = BlogPost::where('blog_category_id', 1)->get();
+        $language = config('app.language', $this->adminLanguage());
+        $title = "Tin đào tạo";
+        $blogs = BlogPost::with('blog_post_descriptions', 'blog_categories' )->get();
+        if ( $blogs) {
+            foreach($blogs as $blog) {
+                $blogCate = $blog
+                                ->blog_categories
+                                ->blog_category_descriptions()
+                                ->where('language_id', config('app.language', $this->adminLanguage()))
+                                ->first();
+                $blogPosts =  BlogPost::where('blog_category_id', $blogCate->blog_category_id)->with(['blog_post_descriptions' => function ($query) {
+                        $query->where('language_id', config('app.language', $this->adminLanguage()));
+                    }])->orderBy('created_at', 'desc')->take(2)->get();
+                $blogName = "";
+                if($blogPosts) {
+                    foreach($blogPosts as $blogPost) {
+                        $blogName = $blogPost->blog_post_descriptions()->first();
+                    }
+                }
+                $data['news'][] = array(
+                    'id' => $blog->post_id,
+                    'img' => $blog->image,
+                    'blogCateName' => $blogCate->name,
+                    'blogPost' =>    $blogName !== "" ? $blogName->name : '',
+
+                );
+            }
+        }
+        return view('frontpage.information.list-information', compact('title', 'data', 'menuDescription', 'blogPostFind', 'language'));
     }
 }

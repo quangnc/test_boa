@@ -208,13 +208,15 @@
                                <div class="content">
                                   <div class="view view-tin-dao-tao-home view-id-tin_dao_tao_home view-display-id-block view-dom-id-b3c03dd065dc8491d944f89159894e2e">
                                      <div class="view-header">
-                                        <div class="tindaotao tinmoi"><a href="tin-tuc.html" class="base_path">Tin đào tạo</a></div>
+                                        <div class="tindaotao tinmoi">
+                                           <a href="{{ route('getListTrainning') }}" class="base_path">Tin đào tạo</a>
+                                       </div>
                                      </div>
                                      <div class="view-content ">
                                          @isset($data)
                                             <?php $i = 0 ?>
                                          @foreach ($data as $dt)
-                                             @if(($dt['blogCateName'] === 'Tin tức' || $dt['blogCateName'] === 'News') && $i < 2)
+                                             @if(($dt['blogCateName'] === 'Đào tạo' || $dt['blogCateName'] === 'Trainning') && $i < 2)
                                                 <?php $i++ ?>
                                                 <div class="views-row views-row-1 views-row-odd views-row-first">
                                                     <div class="views-field views-field-nothing">
@@ -243,13 +245,15 @@
                                <div class="content">
                                   <div class="view view-tin-dao-tao-home view-id-tin_dao_tao_home view-display-id-block_1  -small view-dom-id-27625c58393d8e9b8a528d8eadebcd0f">
                                      <div class="view-header">
-                                        <div class="tinmoi"><a href="dao-tao.html" class="base_path">Tin tức mới</a></div>
+                                        <div class="tinmoi">
+                                          <a href="{{ route('getListNews') }}" class="base_path">Tin tức mới</a>
+                                       </div>
                                      </div>
                                      <div class="view-content uk-grid uk-grid-small">
                                         @isset($data)
                                         <?php $i = 0 ?>
                                         @foreach ($data as $dt)
-                                            @if(($dt['blogCateName'] === 'Đào tạo' || $dt['blogCateName'] === 'Trainning') && $i < 2)
+                                            @if(($dt['blogCateName'] === 'Tin tức' || $dt['blogCateName'] === 'News') && $i < 2)
                                                 <?php $i++ ?>
                                                 <div class="views-row views-row-1 views-row-odd views-row-first uk-width-1-1 uk-width-small-1-2 uk-width-medium-1-1">
                                                     <div class="views-field views-field-nothing">
@@ -264,7 +268,8 @@
                                                                   </div>
                                                                 </figure>
                                                                 </div>
-                                                                <div class="uk-width-1-2 uk-width-medium-2-3 tieude_news"><a href="{{ route('detailPost', [$dt['id'], $dt['blogCateId']]) }}">{{ Helper::text_limit($dt['blogPost']) }}</a>
+                                                                <div class="uk-width-1-2 uk-width-medium-2-3 tieude_news">
+                                                                   <a href="{{ route('detailPost', [$dt['id'], $dt['blogCateId']]) }}">{{ Helper::text_limit($dt['blogPost']) }}</a>
                                                                     <img src="{{ asset('interface/pageHome/images/boaweb/new.gif') }}" />
                                                                 </div>
                                                             </div>
@@ -296,7 +301,7 @@
                                                 <div class="uk-overlay-scale">
                                                 <img src="{{ asset('upload').'/'.$item->image }}" title="{{ $item->title}}" />
                                                 </div>
-                                                <a class="uk-position-cover" href="{{ $item->url}}" target="_blank"></a>
+                                                <a class="uk-position-cover" href="{{$item->url}}" target="_blank"></a>
                                           </li>
                                           </figure>
                                        @endforeach

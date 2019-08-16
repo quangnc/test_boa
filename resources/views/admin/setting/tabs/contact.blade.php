@@ -21,12 +21,3 @@
            value="{{ isset($setting['phone']) ? $setting['phone'] : '' }}"
     >
 </div>
-
-<div class="form-group">
-    <label for="contact_note">@lang('home.contact_us')</label>
-    <textarea
-            class="form-control"
-            name="setting[contact_note]"
-            id="contact_note"
-            rows="5">{{ isset($setting['contact_note']) ? $setting['contact_note'] : '' }}</textarea>
-</div>

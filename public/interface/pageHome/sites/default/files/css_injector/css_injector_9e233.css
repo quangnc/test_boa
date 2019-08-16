@@ -179,9 +179,6 @@ a:hover {
   margin: 0;
   list-style: none;
 }
-#block-locale-language ul li {
-  width: 30px;
-}
 #block-locale-language ul li a img {
   width: 30px;
   height: 23px;

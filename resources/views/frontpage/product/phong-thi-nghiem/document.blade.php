@@ -8,8 +8,7 @@
    </div>
    <div class="region region-content">
       <div id="block-system-main" class="block block-system">
-            <h1 class="title" id="page-title">
-                  Biểu mẫu đăng ký phòng thí nghiệm			</h1>
+            <h1 class="title" id="page-title"> Biểu mẫu đăng ký phòng thí nghiệm</h1>
          <div class="content">
             <div class="view view-danh-sach-bieu-mau view-id-danh_sach_bieu_mau view-display-id-page view-dom-id-edecb78fdceaa230107aa04c66d9f794">
                <div class="view-content ">

@@ -32,9 +32,9 @@
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="#config">Config</a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="#footer">Footer</a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="#contact">Contact</a>
                         </li>
@@ -63,9 +63,9 @@
                         <div class="tab-pane" id="config">
                             @include('admin.setting.tabs.config')
                         </div>
-                        <div class="tab-pane" id="footer">
+                        {{-- <div class="tab-pane" id="footer">
                             @include('admin.setting.tabs.footer')
-                        </div>
+                        </div> --}}
                         <div class="tab-pane" id="contact">
                             @include('admin.setting.tabs.contact')
                         </div>

@@ -21,6 +21,13 @@
            value="{{ isset($setting['twitter']) ? $setting['twitter'] : '' }}"
     >
 </div>
+<div class="form-group">
+    <label for="skype">Skype</label>
+    <input type="text" class="form-control" id="skype" placeholder="Skype ID"
+            name="setting[skype]"
+            value="{{ isset($setting['skype']) ? $setting['skype'] : '' }}"
+    >
+</div>
 
 <div class="form-group">
     <label for="copyright">Copyright</label>

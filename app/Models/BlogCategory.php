@@ -12,11 +12,11 @@ class BlogCategory extends Model
 
     public function blog_category_descriptions()
     {
-        return $this->hasMany( 'App\Models\BlogCategoryDescription', 'blog_category_id', 'blog_category_id' );
+        return $this->hasMany( 'App\Models\BlogCategoryDescription', 'blog_category_id' );
     }
 
     public function blog_post()
     {
-        return $this->belongsTo('App\Models\BlogPost', 'blog_category_id', 'blog_category_id');
+        return $this->belongsTo('App\Models\BlogPost', 'blog_category_id');
     }
 }

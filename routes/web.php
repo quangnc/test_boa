@@ -67,10 +67,13 @@ Route::middleware( [ 'currency', 'setting' ] )->group( function () {
 	Route::get( '/phong-thi-nghiem-y-te/tai-lieu-phong-thi-nghiem', 'MedicalController@document' )->name( 'medical-document' );
 	
 	//new
-	Route::get( '/tin-tuc', 'LaboratoriesController@getList' )->name( 'news-getList' );
-	
 	Route::get( '/thong-tin/{id}', 'InformationController@detail' )->name( 'information' );
 	Route::get( '/thong-tin/tin-tuc/{id}/{cate}', 'InformationController@detailPost' )->name( 'detailPost' );
+
+	// 1. tin tuc (news)
+	// 2. dao tao (tranning)
+	Route::get( '/list-tin-tuc', 'InformationController@getListNews' )->name( 'getListNews' );
+	Route::get( '/list-tin-dao-tao', 'InformationController@getListTrainning' )->name( 'getListTrainning' );
 
 	// Setting
 	Route::get( '/setting/language/{id}', 'SettingController@setLanguage' )->name( 'set-language' );

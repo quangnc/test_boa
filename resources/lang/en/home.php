@@ -2,7 +2,6 @@
 return [
     'news_from_us' => 'News From Us',
     'gallery' => 'GALLERY',
-    'testimonial' => 'TESTIMONIAL',
     'customer_review' => 'CUSTOMER REVIEW',
     'overview' => 'Overview',
     'itinerary' => 'Itinerary',

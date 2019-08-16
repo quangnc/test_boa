@@ -13922,7 +13922,6 @@ Vue.component('service', __webpack_require__(86));
 Vue.component('input-group', __webpack_require__(91));
 Vue.component('out-latest-work', __webpack_require__(96));
 Vue.component('list', __webpack_require__(101));
-Vue.component('testimonial', __webpack_require__(106));
 Vue.component('pricing', __webpack_require__(111));
 Vue.component('layout', __webpack_require__(116));
 Vue.component('availability', __webpack_require__(121));

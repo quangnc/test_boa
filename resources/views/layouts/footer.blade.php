@@ -10,7 +10,7 @@
                                     <div class="content">
                                         <div class="field field-name-field-khoind-noidung field-type-text-long field-label-hidden">
                                             <div class="field-items">
-                                                <div class="field-item even">© 2019 by VACI. All right reserved</div>
+                                                <div class="field-item even">© {{ $setting['sort_link'] }}. {{ $setting['copyright'] }}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -20,8 +20,8 @@
                     </div>
                     <div class="uk-width-1-1 uk-width-small-1-2 uk-width-medium-1-2 uk-text-right">
                         <ul>
-                            <li><i class="uk-icon-button uk-icon-facebook"></i></li>
-                            <li><i class="uk-icon-button uk-icon-twitter"></i></li>
+                            <li><a href="{{ $setting['facebook'] }}" target="_blank"><i class="uk-icon-button uk-icon-facebook"></i></a></li>
+                            <li><a href="{{ $setting['twitter'] }}" target="_blank"><i class="uk-icon-button uk-icon-twitter"></i></a></li>
                         </ul>
                     </div>
                 </div>

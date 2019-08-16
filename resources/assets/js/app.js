@@ -29,7 +29,6 @@ Vue.component('service', require('./components/Service.vue'));
 Vue.component('input-group', require('./components/InputGroup.vue'));
 Vue.component('out-latest-work', require('./components/OurLatestWork.vue'));
 Vue.component('list', require('./components/List.vue'));
-Vue.component('testimonial', require('./components/Testimonial.vue'));
 Vue.component('pricing', require('./components/Pricing.vue'));
 Vue.component('layout', require('./components/Layout.vue'));
 Vue.component('availability', require('./components/Availability.vue'));

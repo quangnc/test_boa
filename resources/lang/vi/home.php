@@ -2,7 +2,6 @@
 return [
     'news_from_us' => 'TIN TỨC TỪ CHÚNG TÔI',
     'gallery' => 'BỘ SƯU TẬP',
-    'testimonial' => 'NÓI VỀ TÔI',
     'customer_review' => 'ĐÁNH GIÁ',
     'overview' => 'TỔNG QUAN',
     'itinerary' => 'HÀNH TRÌNH',

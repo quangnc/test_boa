@@ -37,9 +37,6 @@ class ModuleController extends Controller {
 			),
 			array( 'name' => 'Heading', 'code' => 'heading' ),
 			array( 'name' => 'Slideshow', 'code' => 'slideshow' ),
-			array( 'name' => 'Room', 'code' => 'room' ),
-			array( 'name' => 'Room Carousel', 'code' => 'roomCarousel' ),
-			array( 'name' => 'Testimonial', 'code' => 'testimonial' ),
 			array( 'name' => 'News', 'code' => 'news' ),
 		);
 

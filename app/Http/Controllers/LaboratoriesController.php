@@ -100,10 +100,6 @@ class LaboratoriesController extends Controller
         }
         return view('frontpage.product.phong-thi-nghiem.detail', compact( 'blog', 'blog_description', 'data' ));
     }
-    
-    public function getList() {
-        return view();
-    }
 
     public function search() {
         $data['pageClass'] = "html not-front not-logged-in no-sidebars page-tim-kiem-thi-nghiem i18n-en adminimal-theme page-views page-views jquery-once-1-processed mq-desktop";
