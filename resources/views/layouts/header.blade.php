@@ -2,7 +2,7 @@
     <div class="region region-content-before">
         <div id="block-block-1" class="block block-block">
             <div class="content">
-                <div class="logo"><a href="index.html">
+                <div class="logo"><a href="{{ route('homepage') }}">
                     <img src="{{ Storage::url($setting['logo']) }}" alt="{{ Storage::url($setting['logo']) }}"> 
                 </a></div>
                 <div class="ten_cty">VĂN PHÒNG CÔNG NHẬN CHẤT LƯỢNG</div>

@@ -57,7 +57,6 @@
                                                 <li class="leaf"><a href="{{ route('laboratories-search') }}" title="">Tìm kiếm</a></li>
                                                 <li class="leaf"><a href="{{ route('laboratories-application') }}" title="">Biểu mẫu</a></li>
                                                 <li class="leaf"><a href="{{ route('laboratories-document') }}" title="">Tài liệu</a></li>
-                                                <li class="last leaf"><a href="vi/thi-nghiem.html" title="">Gia hạn, đình chỉ, hủy bỏ</a></li>
                                               </ul>
                                            </div>
                                         </div>
@@ -74,7 +73,6 @@
                                                 <li class="leaf"><a href="{{ route('medical-search') }}" title="">Tìm kiếm</a></li>
                                                 <li class="leaf"><a href="{{ route('medical-application') }}" title="">Biểu mẫu</a></li>
                                                 <li class="leaf"><a href="{{ route('medical-document') }}" title="">Tài liệu</a></li>
-                                                <li class="last leaf"><a href="vi/y-te.html" title="">Gia hạn, đình chỉ, hủy bỏ</a></li>
                                              </ul>
                                           </div>
                                        </div>
@@ -93,7 +91,6 @@
                                                    <li class="leaf"><a href="{{ route('inspectionBodies-search') }}" title="">Tìm kiếm</a></li>
                                                    <li class="leaf"><a href="{{ route('inspectionBodies-application') }}" title="">Biểu mẫu</a></li>
                                                    <li class="leaf"><a href="{{ route('inspectionBodies-document') }}" title="">Tài liệu</a></li>
-                                                 <li class="last leaf"><a href="vi/ds-giam-dinh.html" title="">Gia hạn, đình chỉ, hủy bỏ</a></li>
                                               </ul>
                                            </div>
                                         </div>
@@ -110,7 +107,6 @@
                                                          <li class="leaf"><a href="{{ route('certification-search') }}" title="">Tìm kiếm</a></li>
                                                          <li class="leaf"><a href="{{ route('certification-application') }}" title="">Biểu mẫu</a></li>
                                                          <li class="leaf"><a href="{{ route('certification-document') }}" title="">Tài liệu</a></li>
-                                                       <li class="last leaf"><a href="vi/chung-nhan.html" title="">Gia hạn, đình chỉ, hủy bỏ</a></li>
                                                     </ul>
                                                  </div>
                                               </div>
@@ -130,7 +126,6 @@
                                                 <li class="leaf"><a href="{{ route('laboratories-search') }}" title="">Tìm kiếm</a></li>
                                                 <li class="leaf"><a href="{{ route('laboratories-application') }}" title="">Biểu mẫu</a></li>
                                                 <li class="leaf"><a href="{{ route('laboratories-document') }}" title="">Tài liệu</a></li>
-                                              <li class="last leaf"><a href="vi/ds-giam-dinh.html" title="">Gia hạn, đình chỉ, hủy bỏ</a></li>
                                            </ul>
                                         </div>
                                      </div>
@@ -147,7 +142,6 @@
                                                 <li class="leaf"><a href="{{ route('laboratories-search') }}" title="">Tìm kiếm</a></li>
                                                 <li class="leaf"><a href="{{ route('laboratories-application') }}" title="">Biểu mẫu</a></li>
                                                 <li class="leaf"><a href="{{ route('laboratories-document') }}" title="">Tài liệu</a></li>
-                                              <li class="last leaf"><a href="vi/y-te.html" title="">Gia hạn, đình chỉ, hủy bỏ</a></li>
                                            </ul>
                                         </div>
                                      </div>

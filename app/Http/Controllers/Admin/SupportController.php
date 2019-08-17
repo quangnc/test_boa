@@ -120,7 +120,6 @@ class SupportController extends Controller {
 		$data_blog        = $this->_supportService->edit( $id );
 		$data_blog_post = $this->_supportService->create();
 
-		$blog_post_categories = $data_blog_post['blog_cate'];
 		$blog_post = $request->old('blog_post') ? $request->old('blog_post') : $data_blog['blog_post'];
         $blog_post_descriptions = $request->old('blog_post_descriptions') ? $request->old('blog_post_descriptions') : $data_blog['blog_post_descriptions'];
 		
