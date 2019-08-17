@@ -19,7 +19,7 @@
                    <div class="">
                       <div id="block-block-3" class="block block-block">
                          <div class="content">
-                            <div class="uk-slidenav-position" data-uk-slideshow="{animation:'random-fx', autoplay:true,autoplayInterval:'5000'}">
+                            <div class="uk-slidenav-position" data-uk-slideshow="{height: '450px', animation:'random-fx', autoplay:true,autoplayInterval:'5000'}">
                                <ul class="uk-slideshow">
                                     @isset($slides)
                                     @foreach($slides as $slide)
