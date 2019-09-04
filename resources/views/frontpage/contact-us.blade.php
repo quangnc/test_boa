@@ -46,7 +46,7 @@
                         <div class="group-khung1 field-group-div uk-width-1-1 uk-width-medium-5-10">
                             <div class="field field-name-field-webform-noidung field-type-text-long field-label-hidden">
                                 <div class="field-items">
-                                    <div class="field-item even"><strong>VĂN PHÒNG CÔNG NHẬN CHẤT LƯỢNG&nbsp;</strong><br>
+                                    <div class="field-item even"><strong>VIỆN CÔNG NHẬN CHẤT LƯỢNG VIỆT NAM&nbsp;</strong><br>
                                         <br>
                                         <strong>Hà Nội:&nbsp;</strong><br style="color: rgb(0, 0, 0); font-family: arial, Tahoma, &quot;Times New Roman&quot;; font-size: 12px; line-height: normal; white-space: nowrap;">
                                         Số 8 Hoàng Quốc Việt, Quận Cầu Giấy, Hà Nội&nbsp;<br>

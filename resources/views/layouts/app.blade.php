@@ -24,11 +24,11 @@
     <meta name="robots" content="follow, index"/>
     <meta name="generator" content="Vinno JSC"/>
     <meta name="revisit-after" content="3 ngày"/>
-    <meta property="og:site_name" content="Văn phòng Công nhận Chất lượng (Vaci)"/>
+    <meta property="og:site_name" content="VIỆN CÔNG NHẬN CHẤT LƯỢNG VIỆT NAM (Vaci)"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="vaci.html"/>
-    <meta property="og:title" content="Văn phòng Công nhận Chất lượng (Vaci)"/>
-    <title>Văn phòng Công nhận Chất lượng (Vaci)</title>
+    <meta property="og:title" content="VIỆN CÔNG NHẬN CHẤT LƯỢNG VIỆT NAM (Vaci)"/>
+    <title>VIỆN CÔNG NHẬN CHẤT LƯỢNG VIỆT NAM (Vaci)</title>
     
     <link type="text/css" rel="stylesheet" href="{{ asset('interface/pageHome/modules/system/system.basee233.css?puenjb') }}" media="all"/>
     <link type="text/css" rel="stylesheet" href="{{ asset('interface/pageHome/modules/system/system.menuse233.css?puenjb') }}" media="all"/>
