@@ -13,6 +13,6 @@ yarn-error.log
 .idea
 .DS_Store
 public/mix-manifest.json
-public/upload
+# public/upload
 /vendor
 composer.lock
