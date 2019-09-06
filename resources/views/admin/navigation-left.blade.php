@@ -110,6 +110,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{ route('upload-file.index')  }}" class="nav-link">
+                        <i class="fa fa-circle-o nav-icon"></i>
+                        <p>upload-File</p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="{{ route('application-form.index')  }}" class="nav-link">
                         <i class="fa fa-circle-o nav-icon"></i>
                         <p>Application Form</p>

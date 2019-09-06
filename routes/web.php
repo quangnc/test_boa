@@ -103,6 +103,7 @@ Route::group( [ 'prefix' => 'dashboard', 'middleware' => 'auth', 'namespace' => 
 		Route::resource( 'application-form', 'ApplicationFormController' );
 		Route::resource( 'document', 'DocumentController' );
 		Route::resource( 'data-product', 'DataProductController' );
+		Route::resource( 'upload-file', 'UploadFileController' );
 		
 	} );
 

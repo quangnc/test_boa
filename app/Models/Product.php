@@ -22,5 +22,10 @@ class Product extends Model
     {
         return $this->hasMany( 'App\Models\DataProduct', 'product_id' );
     }
+
+    public function product_file()
+    {
+        return $this->hasOne( 'App\Models\UploadFile', 'product_id' );
+    }
     
 }
