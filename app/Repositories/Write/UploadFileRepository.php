@@ -19,7 +19,7 @@ class UploadFileRepository implements CRUDInterface {
 				$file->product_id = $data['product_id'];
 				$file->sort_order = $data['sort_order'];
 				if($file->save()) {
-        			$data['file']->move('public/upload/file/', $data['file']->getClientOriginalName());
+        			$data['file']->move('upload/file/', $data['file']->getClientOriginalName());
 				}
 
 			DB::commit();

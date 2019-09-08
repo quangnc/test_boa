@@ -1,4 +1,4 @@
-<template>
+﻿<template>
 
     <div class="custom-image">
         <div class="image-manager-thumb img-thumbnail" v-bind:style="{width: '100px', height: '100px'}">

@@ -8,6 +8,7 @@ use App\Models\BlogPost;
 use App\Models\DataProduct;
 use App\Models\ApplicationForm;
 use App\Models\Document;
+use App\Models\UploadFile;
 
 use App\Repositories\Read\ConfigSetting;
 class CertificationController extends Controller
@@ -141,7 +142,7 @@ class CertificationController extends Controller
             }
         }
 
-        return view('frontpage.product.certification.search', compact( 'blogs', 'data', 'dataProducts', 'dataP', 'count' ));
+        return view('frontpage.product.certification.search', compact( 'blogs', 'data', 'dataProducts', 'count' ));
     }
 
     public function applicationForm() {
@@ -175,8 +176,9 @@ class CertificationController extends Controller
                 );
             }
         }
+        $file = UploadFile::all()->where('product_id', 4)->where('loai', 0);
 
-        return view('frontpage.product.certification.application-form', compact( 'blogs', 'data', 'applicationForm' ));
+        return view('frontpage.product.certification.application-form', compact('file', 'blogs', 'data', 'applicationForm' ));
     }
 
     public function document() {
@@ -209,7 +211,8 @@ class CertificationController extends Controller
                 );
             }
         }
+        $file = UploadFile::all()->where('product_id', 4)->where('loai', 1);
 
-        return view('frontpage.product.certification.document', compact( 'blogs', 'data', 'documents' ));
+        return view('frontpage.product.certification.document', compact( 'file', 'blogs', 'data', 'documents' ));
     }
 }

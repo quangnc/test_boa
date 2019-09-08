@@ -1,4 +1,4 @@
-<div id="content-before">
+﻿<div id="content-before">
     <div class="region region-content-before">
         <div id="block-block-1" class="block block-block">
             <div class="content">
@@ -10,7 +10,7 @@
                 <div class="ten_cty">VIỆN CÔNG NHẬN CHẤT LƯỢNG VIỆT NAM</div>
                 <div class="cong-nhan">
                         <a href="{{ route('homepage') }}">
-                            <img src="{{ asset('interface/pageHome/images/boaweb/congnhan.jpg') }}" alt="{{ asset('interface/pageHome/images/boaweb/congnhan.jpg') }}" style="    height: 100px;
+                            <img src="{{ asset('interface/pageHome/images/boaweb/congnhan.png') }}" alt="{{ asset('interface/pageHome/images/boaweb/congnhan.png') }}" style="    height: 100px;
                             margin-top: 14px;
                             margin-left: 32px;">
                         </a>
@@ -33,7 +33,10 @@
                                         @else
                                         <li class="menu-650 menuparent  menu-path-front  even ">
                                         @endif
-                                            <a href="{{ route('homepage') }}" title="" class="active">{{ $menu['menuCateDescription']->name }}</a>
+                                        @if ($menu['menuCateDescription']->name === "Liên hệ")
+                                        <a href="{{ route('contact') }}" title="Liên hệ" class="active">{{ $menu['menuCateDescription']->name }}</a>
+                                        @else
+                                        <a href="{{ route('homepage') }}" title="{{ $menu['menuCateDescription']->name }}" class="active">{{ $menu['menuCateDescription']->name }}</a>
                                             @if (count($menu['menuChildren']) > 0)
                                                 <ul>
                                                     @foreach ($menu['menuChildren'] as $item)
@@ -46,6 +49,8 @@
                                                     @endforeach
                                                 </ul>
                                             @endif
+                                        @endif
+                                            
                                         </li>
                                     @endforeach
                                 @endisset

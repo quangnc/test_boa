@@ -22,10 +22,10 @@ class SlideController extends Controller
     public function index()
     {
         $data['slides'] = $this->_slideService->index();
-		$data['page_title']  = "Hotels";
+		$data['page_title']  = "Slide";
 		$data['breadcrumbs'] = array(
 			array( 'router' => 'getDashboard', 'title' => 'Dashboard', 'active' => false ),
-			array( 'router' => 'slide.index', 'title' => 'Hotels', 'active' => true ),
+			array( 'router' => 'slide.index', 'title' => 'Slide', 'active' => true ),
 		);
 		$data['actions']     = [
 			array(

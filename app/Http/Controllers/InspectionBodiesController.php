@@ -8,6 +8,7 @@ use App\Models\BlogPost;
 use App\Models\DataProduct;
 use App\Models\ApplicationForm;
 use App\Models\Document;
+use App\Models\UploadFile;
 
 use App\Repositories\Read\ConfigSetting;
 class InspectionBodiesController extends Controller
@@ -106,7 +107,7 @@ class InspectionBodiesController extends Controller
     }
 
     public function search() {
-        $data['pageClass'] = "html not-front not-logged-in no-sidebars page-tim-kiem-thi-nghiem i18n-en adminimal-theme page-views page-views jquery-once-1-processed mq-desktop";
+        $data['pageClass'] = "html not-front not-logged-in no-sidebars page-tim-kiem-giam-dinh i18n-vi adminimal-theme page-views page-views page-views jquery-once-1-processed mq-desktop";
         // 1. y tế
         // product_id
         $dataProducts = DataProduct::where('product_id', 3)->with(['data_product_descriptions' => function ($query) {
@@ -138,7 +139,7 @@ class InspectionBodiesController extends Controller
             }
         }
 
-        return view('frontpage.product.inspection_bodies.search', compact( 'blogs', 'data', 'dataProducts', 'dataP', 'count' ));
+        return view('frontpage.product.inspection_bodies.search', compact( 'blogs', 'data', 'dataProducts', 'count' ));
     }
 
     public function applicationForm() {
@@ -172,8 +173,9 @@ class InspectionBodiesController extends Controller
                 );
             }
         }
+        $file = UploadFile::all()->where('product_id', 3)->where('loai', 0);
 
-        return view('frontpage.product.inspection_bodies.application-form', compact( 'blogs', 'data', 'applicationForm' ));
+        return view('frontpage.product.inspection_bodies.application-form', compact( 'blogs', 'data', 'applicationForm', 'file' ));
     }
 
     public function document() {
@@ -206,7 +208,8 @@ class InspectionBodiesController extends Controller
                 );
             }
         }
+        $file = UploadFile::all()->where('product_id', 3)->where('loai', 1);
 
-        return view('frontpage.product.inspection_bodies.document', compact( 'blogs', 'data', 'documents' ));
+        return view('frontpage.product.inspection_bodies.document', compact( 'blogs', 'data', 'documents', 'file'));
     }
 }

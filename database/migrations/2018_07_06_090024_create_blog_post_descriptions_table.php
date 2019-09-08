@@ -17,8 +17,8 @@ class CreateBlogPostDescriptionsTable extends Migration
             $table->integer('post_id')->length(11)->unsigned();
             $table->integer('language_id')->length(11)->unsigned();
             $table->string('name', 255);
-            $table->text('description');
-            $table->text('content');
+            $table->longText('description');
+            $table->longText('content');
             $table->string('meta_title', 255);
             $table->string('meta_description', 255);
             $table->string('meta_keyword', 255);

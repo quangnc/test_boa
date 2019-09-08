@@ -42,6 +42,7 @@
                     @endisset
                     </tbody>
                 </table>
+                {{ $data['uploadFiles']->render() }}
             </div>
         </div>
     </div>

@@ -26,8 +26,7 @@ class UploadFileRepository implements CRUDInterface {
 
     public function index() 
     {
-      $file = UploadFile::all();
-		return UploadFile::all();
+		return UploadFile::paginate(20);
     }
     
     public function edit( $id ) 

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-
+@include('frontpage.product.medical.sidebar-left')
 <div id="main-content">
     <div class="region region-content">
        <div id="block-system-main" class="block block-system">

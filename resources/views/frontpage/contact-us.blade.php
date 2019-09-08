@@ -1,5 +1,5 @@
 @push('scripts')
-<script type='text/javascript' src='{{ asset('frontpage/plugins\google-map-plugin\assets\js\maps.js') }}'></script>
+<script type='text/javascript' src='{{ asset('interface/pageHome/plugins\google-map-plugin\assets\js\maps.js') }}'></script>
 
     <script>
         var map;
@@ -22,7 +22,7 @@
             });
         }
     </script>
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEhdtc_8SQLSUO3rUoHzNOmo49oTcb_kU&callback=initMap"
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI_7NJcXtt9bV4QymiiICtsUQYggKZecY&callback=initMap"
     async defer></script>
 @endpush
 @extends('layouts.app')
@@ -49,9 +49,9 @@
                                     <div class="field-item even"><strong>VIỆN CÔNG NHẬN CHẤT LƯỢNG VIỆT NAM&nbsp;</strong><br>
                                         <br>
                                         <strong>Hà Nội:&nbsp;</strong><br style="color: rgb(0, 0, 0); font-family: arial, Tahoma, &quot;Times New Roman&quot;; font-size: 12px; line-height: normal; white-space: nowrap;">
-                                        Số 8 Hoàng Quốc Việt, Quận Cầu Giấy, Hà Nội&nbsp;<br>
-                                        Tel: 024.3791 1552 &nbsp; Fax: 024.3791 1551&nbsp;<br>
-                                        Email:&nbsp;<a href="mailto:vpcongnhan@boa.gov.vn">vpcongnhan@boa.gov.vn</a>&nbsp;<br style="color: rgb(0, 0, 0); font-family: arial, Tahoma, &quot;Times New Roman&quot;; font-size: 12px; line-height: normal; white-space: nowrap;">
+                                        Địa chỉ: Số 52, ngõ 46, đường Liên Mạc, phường Liên Mạc, quận Bắc Từ Liêm, TP.Hà Nộii&nbsp;<br>
+                                        Hotline: 024.22.66.1111 &nbsp;<br>
+                                        Email:&nbsp;<a href="mailto:congnhan.vaci@gmail.com">congnhan.vaci@gmail.com</a>&nbsp;<br style="color: rgb(0, 0, 0); font-family: arial, Tahoma, &quot;Times New Roman&quot;; font-size: 12px; line-height: normal; white-space: nowrap;">
                                     </div>
                                     <div class="gdlr-item gdlr-content-item" style="margin-bottom: 0px;">
                                             <div class="wpgmp_map_container wpgmp-map-1" rel="map1">

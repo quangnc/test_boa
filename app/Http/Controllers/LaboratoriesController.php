@@ -8,6 +8,7 @@ use App\Models\BlogPost;
 use App\Models\DataProduct;
 use App\Models\ApplicationForm;
 use App\Models\Document;
+use App\Models\UploadFile;
 
 use App\Repositories\Read\ConfigSetting;
 class LaboratoriesController extends Controller
@@ -134,7 +135,7 @@ class LaboratoriesController extends Controller
             }
         }
 
-        return view('frontpage.product.phong-thi-nghiem.search', compact( 'blogs', 'data', 'dataProducts', 'dataP', 'count' ));
+        return view('frontpage.product.phong-thi-nghiem.search', compact( 'blogs', 'data', 'dataProducts', 'count' ));
     }
 
     public function applicationForm() {
@@ -169,7 +170,10 @@ class LaboratoriesController extends Controller
             }
         }
 
-        return view('frontpage.product.phong-thi-nghiem.application-form', compact( 'blogs', 'data', 'applicationForm' ));
+        $file = UploadFile::all()->where('product_id', 1)->where('loai', 0);
+        // dd( $file);
+
+        return view('frontpage.product.phong-thi-nghiem.application-form', compact( 'blogs', 'data', 'applicationForm', 'file' ));
     }
 
     public function document() {
@@ -202,7 +206,8 @@ class LaboratoriesController extends Controller
                 );
             }
         }
+        $file = UploadFile::all()->where('product_id', 1)->where('loai', 1);
 
-        return view('frontpage.product.phong-thi-nghiem.document', compact( 'blogs', 'data', 'documents' ));
+        return view('frontpage.product.phong-thi-nghiem.document', compact( 'blogs', 'data', 'documents', 'file' ));
     }
 }

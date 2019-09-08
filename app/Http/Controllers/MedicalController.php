@@ -8,6 +8,8 @@ use App\Models\BlogPost;
 use App\Models\DataProduct;
 use App\Models\ApplicationForm;
 use App\Models\Document;
+use App\Models\UploadFile;
+
 
 use App\Repositories\Read\ConfigSetting;
 class MedicalController extends Controller
@@ -106,7 +108,7 @@ class MedicalController extends Controller
     }
 
     public function search() {
-        $data['pageClass'] = "html not-front not-logged-in no-sidebars page-tim-kiem-thi-nghiem i18n-en adminimal-theme page-views page-views jquery-once-1-processed mq-desktop";
+        $data['pageClass'] = "html not-front not-logged-in no-sidebars page-tim-kiem-y-te i18n-vi adminimal-theme page-views page-views page-views jquery-once-1-processed mq-desktop";
         // 1. y tế
         // product_id
         $dataProducts = DataProduct::where('product_id', 2)->with(['data_product_descriptions' => function ($query) {
@@ -138,7 +140,7 @@ class MedicalController extends Controller
             }
         }
 
-        return view('frontpage.product.medical.search', compact( 'blogs', 'data', 'dataProducts', 'dataP', 'count' ));
+        return view('frontpage.product.medical.search', compact( 'blogs', 'data', 'dataProducts', 'count' ));
     }
 
     public function applicationForm() {
@@ -172,8 +174,9 @@ class MedicalController extends Controller
                 );
             }
         }
+        $file = UploadFile::all()->where('product_id', 2)->where('loai', 0);
 
-        return view('frontpage.product.medical.application-form', compact( 'blogs', 'data', 'applicationForm' ));
+        return view('frontpage.product.medical.application-form', compact( 'blogs', 'data', 'applicationForm', 'file' ));
     }
 
     public function document() {
@@ -206,7 +209,8 @@ class MedicalController extends Controller
                 );
             }
         }
+        $file = UploadFile::all()->where('product_id', 2)->where('loai', 1);
 
-        return view('frontpage.product.medical.document', compact( 'blogs', 'data', 'documents' ));
+        return view('frontpage.product.medical.document', compact( 'blogs', 'data', 'documents', 'file' ));
     }
 }

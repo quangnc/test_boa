@@ -7,12 +7,12 @@
       </div>
    </div>
    <div class="region region-content">
-      <div id="block-system-main" class="block block-system">
+      <div  class="block block-system">
          <div class="content">
             <div class="view view-danh-sach-dich-vu-1 view-id-danh_sach_dich_vu_1 view-display-id-page_2 view-dom-id-022b05a9d049ad1ede4ac9b5b7cfe8cb">
-               <h1 class="uk-display-inline-block">Tìm kiếm Phòng thí nghiệm</h1>
+               <h1 id="page-title" >Tìm kiếm Phòng thí nghiệm</h1>
                <div class="view-filters" id="views-fieldset">
-                  <form action="/vi/tim-kiem-thi-nghiem" method="get" id="views-exposed-form-danh-sach-dich-vu-1-page-2" accept-charset="UTF-8">
+                  <form action="/" method="get" id="views-exposed-form-danh-sach-dich-vu-1-page-2" accept-charset="UTF-8">
                      <div>
                         <div class="views-exposed-form">
                            <div class="views-exposed-widgets clearfix">
@@ -27,10 +27,10 @@
                               </div>
                               <div id="edit-field-dichvu-vilas-value-wrapper" class="views-exposed-widget views-widget-filter-field_dichvu_vilas_value">
                                  <label for="edit-field-dichvu-vilas-value">
-                                 Số VILAS          </label>
+                                 Số VACILAS          </label>
                                  <div class="views-widget">
                                     <div class="form-item form-type-textfield form-item-field-dichvu-vilas-value">
-                                       <input type="text" id="edit-field-dichvu-vilas-value" name="field_dichvu_vilas_value" value="" size="30" maxlength="128" class="form-text" placeholder="Số VILAS">
+                                       <input type="text" id="edit-field-dichvu-vilas-value" name="field_dichvu_vilas_value" value="" size="30" maxlength="128" class="form-text" placeholder="Số VACILAS">
                                     </div>
                                  </div>
                               </div>
@@ -170,7 +170,7 @@
                      <thead>
                         <tr>
                            <th class="views-field views-field-field-dichvu-vilas">
-                              <a href="/vi/tim-kiem-thi-nghiem?field_dichvu_vilas_value=&amp;title=&amp;field_dichvu_chuquan_value=&amp;&amp;&amp;combine=&amp;order=field_dichvu_vilas&amp;sort=asc" title="sắp xếp theo Số VILAS" class="active">Số VILAS</a>          
+                              <a href="/vi/tim-kiem-thi-nghiem?field_dichvu_vilas_value=&amp;title=&amp;field_dichvu_chuquan_value=&amp;&amp;&amp;combine=&amp;order=field_dichvu_vacilas&amp;sort=asc" title="sắp xếp theo Số VACILAS" class="active">Số VACILAS</a>          
                            </th>
                            <th class="views-field views-field-megarow-links">
                               Tên phòng thí nghiệm          

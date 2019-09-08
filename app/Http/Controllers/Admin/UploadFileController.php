@@ -28,7 +28,7 @@ class UploadFileController extends Controller
 		$data['page_title']  = "upload-file";
 		$data['breadcrumbs'] = array(
 			array( 'router' => 'getDashboard', 'title' => 'Dashboard', 'active' => false ),
-			array( 'router' => 'upload-file.index', 'title' => 'Hotels', 'active' => true ),
+			array( 'router' => 'upload-file.index', 'title' => 'Upload File', 'active' => true ),
 		);
 		$data['actions']     = [
 			array(

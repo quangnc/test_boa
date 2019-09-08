@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div id="main-content">
@@ -52,12 +52,7 @@
                                         <div id="block-menu-menu-menu-phong-thi-nghiem" class="block block-menu">
                                            <h2>Danh mục</h2>
                                            <div class="content">
-                                              <ul class="menu">
-                                                <li class="first leaf"><a href="{{ route('laboratories-introduction') }}" title="">Giới thiệu</a></li>
-                                                <li class="leaf"><a href="{{ route('laboratories-search') }}" title="">Tìm kiếm</a></li>
-                                                <li class="leaf"><a href="{{ route('laboratories-application') }}" title="">Biểu mẫu</a></li>
-                                                <li class="leaf"><a href="{{ route('laboratories-document') }}" title="">Tài liệu</a></li>
-                                              </ul>
+                                             @include('frontpage.product.phong-thi-nghiem.menu')
                                            </div>
                                         </div>
                                      </div>
@@ -68,12 +63,8 @@
                                        <div id="block-menu-menu-menu-phong-thi-nghiem-y-te" class="block block-menu">
                                           <h2>Danh mục</h2>
                                           <div class="content">
-                                             <ul class="menu">
-                                                <li class="first leaf"><a href="{{ route('medical-introduction') }}" title="">Giới thiệu</a></li>
-                                                <li class="leaf"><a href="{{ route('medical-search') }}" title="">Tìm kiếm</a></li>
-                                                <li class="leaf"><a href="{{ route('medical-application') }}" title="">Biểu mẫu</a></li>
-                                                <li class="leaf"><a href="{{ route('medical-document') }}" title="">Tài liệu</a></li>
-                                             </ul>
+                                             @include('frontpage.product.medical.menu')
+
                                           </div>
                                        </div>
                                     </div>
@@ -86,12 +77,8 @@
                                         <div id="block-menu-menu-menu-to-chuc-giam-dinh" class="block block-menu">
                                            <h2>Danh mục</h2>
                                            <div class="content">
-                                              <ul class="menu">
-                                                   <li class="first leaf"><a href="{{ route('inspectionBodies-introduction') }}" title="">Giới thiệu</a></li>
-                                                   <li class="leaf"><a href="{{ route('inspectionBodies-search') }}" title="">Tìm kiếm</a></li>
-                                                   <li class="leaf"><a href="{{ route('inspectionBodies-application') }}" title="">Biểu mẫu</a></li>
-                                                   <li class="leaf"><a href="{{ route('inspectionBodies-document') }}" title="">Tài liệu</a></li>
-                                              </ul>
+                                             @include('frontpage.product.inspection_bodies.menu')
+                                              
                                            </div>
                                         </div>
                                      </div>
@@ -102,12 +89,8 @@
                                               <div id="block-menu-menu-menu-to-chuc-chung-nhan" class="block block-menu">
                                                  <h2>Danh mục</h2>
                                                  <div class="content">
-                                                    <ul class="menu">
-                                                         <li class="first leaf"><a href="{{ route('certification-introduction') }}" title="">Giới thiệu</a></li>
-                                                         <li class="leaf"><a href="{{ route('certification-search') }}" title="">Tìm kiếm</a></li>
-                                                         <li class="leaf"><a href="{{ route('certification-application') }}" title="">Biểu mẫu</a></li>
-                                                         <li class="leaf"><a href="{{ route('certification-document') }}" title="">Tài liệu</a></li>
-                                                    </ul>
+                @include('frontpage.product.certification.menu')
+                                                    
                                                  </div>
                                               </div>
                                            </div>
@@ -116,7 +99,7 @@
                                </div>
                                <div class="uk-grid">
                                <div class="uk-width-1-1 uk-width-small-1-2 uk-width-medium-1-2">
-                                  <div class="giamdinh">
+                                  <div class="tochuc">
                                      <div class="tieude_dichvu">Công nhận năng lực tổ chức</div>
                                      <div id="block-menu-menu-menu-to-chuc-giam-dinh" class="block block-menu">
                                         <h2>Danh mục</h2>
@@ -126,13 +109,14 @@
                                                 <li class="leaf"><a href="{{ route('laboratories-search') }}" title="">Tìm kiếm</a></li>
                                                 <li class="leaf"><a href="{{ route('laboratories-application') }}" title="">Biểu mẫu</a></li>
                                                 <li class="leaf"><a href="{{ route('laboratories-document') }}" title="">Tài liệu</a></li>
+                                                <li class="last leaf"><a href="/vi/thi-nghiem" title="">Gia hạn, đình chỉ, hủy bỏ</a></li>
                                            </ul>
                                         </div>
                                      </div>
                                   </div>
                                </div>
                                <div class="uk-width-1-1 uk-width-small-1-2 uk-width-medium-1-2">
-                                  <div class="yte">
+                                  <div class="khac">
                                      <div class="tieude_dichvu">Công nhận năng lực khác</div>
                                      <div id="block-menu-menu-menu-phong-thi-nghiem-y-te" class="block block-menu">
                                         <h2>Danh mục</h2>
@@ -142,6 +126,7 @@
                                                 <li class="leaf"><a href="{{ route('laboratories-search') }}" title="">Tìm kiếm</a></li>
                                                 <li class="leaf"><a href="{{ route('laboratories-application') }}" title="">Biểu mẫu</a></li>
                                                 <li class="leaf"><a href="{{ route('laboratories-document') }}" title="">Tài liệu</a></li>
+                                                <li class="last leaf"><a href="/vi/thi-nghiem" title="">Gia hạn, đình chỉ, hủy bỏ</a></li>
                                            </ul>
                                         </div>
                                      </div>
@@ -167,7 +152,7 @@
                                         </p>
                                         <p class="ht">
                                            <img src="{{ asset('interface/pageHome/images/ic-sk.png') }}">
-                                           <span><a href="skype:Viện chất lượng?chat" style="color:#1978bb">Viện chất lượng</a></span>
+                                           <span><a href="skype:Viện chất lượng?chat" style="color:#1978bb">Viện công nhận VACI</a></span>
                                         </p>
                                         <ul class="list-ht">
                                           @isset($supports)

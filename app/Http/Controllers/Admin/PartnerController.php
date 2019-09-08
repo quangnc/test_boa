@@ -21,10 +21,10 @@ class PartnerController extends Controller
     public function index()
     {
         $data['partners'] = $this->_partnerService->index();
-		$data['page_title']  = "Hotels";
+		$data['page_title']  = "Partner";
 		$data['breadcrumbs'] = array(
 			array( 'router' => 'getDashboard', 'title' => 'Dashboard', 'active' => false ),
-			array( 'router' => 'partner.index', 'title' => 'Hotels', 'active' => true ),
+			array( 'router' => 'partner.index', 'title' => 'Partner', 'active' => true ),
 		);
 		$data['actions']     = [
 			array(

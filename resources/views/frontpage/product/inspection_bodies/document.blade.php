@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('content')
+@include('frontpage.product.menu-thieu')
+
 <div id="main-content">
    <div id="navigation">
       <div class="tabs-secondary clearfix">
@@ -30,38 +32,37 @@
                         </tr>
                      </thead>
                      <tbody>
-                        @isset($documents)
-                           <?php $i = 1; ?>
-                           @foreach ($documents as $item)
-                              <?php 
-                                 $i++;
-                              ?>
-                              <tr class="odd views-row-first">
-                                 <td class="views-field views-field-counter">
-                                    {{ $i }}       
-                                 </td>
-                                 <td class="views-field views-field-nothing">
-                                 <div class="bieumau">{{ $item->document_descriptions()->first()->name }}</div>
-                                 </td>
-                                 <td class="views-field views-field-created">
-                                   {{ Carbon\Carbon::parse($item->created_at)->format('d/m/Y') }}       
-                                 </td>
-                                 <td class="views-field views-field-php">
-                                    <div class="bieumau">
-                                       <i class="uk-icon-save"></i>
-                                       {{-- <a href="http://www.boa.gov.vn/sites/default/files/af_14.02_bao_cao_hdkp_2010.doc"> Dowload</a></div> --}}
-                                       <a href="#"> Dowload</a></div>
-                                    <div id="my-id" class="uk-modal">
-                                       <div class="uk-modal-dialog">
-                                          <a class="uk-modal-close uk-close"></a>
-                                          Xin vui lòng liên lạc Vaci
+                           @isset($file)
+                              <?php $i = 1; ?>
+                              @foreach ($file as $item)
+                                 <?php 
+                                    $i++;
+                                 ?>
+                                 <tr class="odd views-row-first">
+                                    <td class="views-field views-field-counter">
+                                       {{ $i }}       
+                                    </td>
+                                    <td class="views-field views-field-nothing">
+                                    <div class="bieumau">{{ $item->file }}</div>
+                                    </td>
+                                    <td class="views-field views-field-created">
+                                      {{ Carbon\Carbon::parse($item->created_at)->format('d/m/Y') }}       
+                                    </td>
+                                    <td class="views-field views-field-php">
+                                       <div class="bieumau">
+                                          <i class="uk-icon-save"></i>
+                                          <a href="/upload/file/{{$item->file}}"> Dowload</a></div>
+                                       <div id="my-id" class="uk-modal">
+                                          <div class="uk-modal-dialog">
+                                             <a class="uk-modal-close uk-close"></a>
+                                             Xin vui lòng liên lạc Vaci
+                                          </div>
                                        </div>
-                                    </div>
-                                 </td>
-                              </tr>
-                           @endforeach
-                        @endisset
-                     </tbody>
+                                    </td>
+                                 </tr>
+                              @endforeach
+                           @endisset
+                        </tbody>
                   </table>
                </div>
             </div>

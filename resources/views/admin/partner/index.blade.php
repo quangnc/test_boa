@@ -12,6 +12,7 @@
                     <tr>
                         <th class="text-center" style="width: 1px">ID</th>
                         <th class="">image</th>
+                        
                         <th class="">name</th>
                         <th class="">Sort Order</th>
                         <th class="">Status</th>
@@ -23,7 +24,7 @@
                         @foreach ($data['partners'] as $partner)
                             <tr>
                                 <th scope="row">{{ $partner->id }}</th>
-                                <td>{{ $partner->image }}</td>
+                                <td style="width: 300px;"><img src=" {{ asset('upload').'/'.$partner->image }} " alt=" {{ $partner->image }} " width="300" height="150"></td>
                                 <td>{{ $partner->name }}</td>
                                 <td>{{ $partner->sort_order }}</td>
                                 <td>{{ $partner->status == 0 ? "Enable" :  "Disable" }}</td>

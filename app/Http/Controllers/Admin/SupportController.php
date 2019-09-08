@@ -148,7 +148,7 @@ class SupportController extends Controller {
                 'tag'       => 'button'
             ),
 		];
-		return view( 'admin.support.support.support-form', compact( 'data', 'blog_post_descriptions', 'blog_post', 'blog_post_categories' ) );
+		return view( 'admin.support.support.support-form', compact( 'data', 'blog_post_descriptions', 'blog_post' ) );
 	}
 
 	/**

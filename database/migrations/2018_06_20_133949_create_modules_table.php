@@ -18,7 +18,7 @@ class CreateModulesTable extends Migration
 	        $table->string('code', 32);
 	        $table->string('name', 255);
 	        $table->tinyInteger('status')->length(1);
-	        $table->text('setting');
+	        $table->longText('setting');
         });
     }
 

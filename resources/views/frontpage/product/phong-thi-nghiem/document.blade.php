@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('content')
+@include('frontpage.product.menu-thieu')
+
 <div id="main-content">
    <div id="navigation">
       <div class="tabs-secondary clearfix">
@@ -30,9 +32,9 @@
                         </tr>
                      </thead>
                      <tbody>
-                        @isset($documents)
+                        @isset($file)
                            <?php $i = 1; ?>
-                           @foreach ($documents as $item)
+                           @foreach ($file as $item)
                               <?php 
                                  $i++;
                               ?>
@@ -41,7 +43,7 @@
                                     {{ $i }}       
                                  </td>
                                  <td class="views-field views-field-nothing">
-                                 <div class="bieumau">{{ $item->document_descriptions()->first()->name }}</div>
+                                 <div class="bieumau">{{ $item->file }}</div>
                                  </td>
                                  <td class="views-field views-field-created">
                                    {{ Carbon\Carbon::parse($item->created_at)->format('d/m/Y') }}       
@@ -49,8 +51,7 @@
                                  <td class="views-field views-field-php">
                                     <div class="bieumau">
                                        <i class="uk-icon-save"></i>
-                                       {{-- <a href="http://www.boa.gov.vn/sites/default/files/af_14.02_bao_cao_hdkp_2010.doc"> Dowload</a></div> --}}
-                                       <a href="#"> Dowload</a></div>
+                                       <a href="/upload/file/{{$item->file}}"> Dowload</a></div>
                                     <div id="my-id" class="uk-modal">
                                        <div class="uk-modal-dialog">
                                           <a class="uk-modal-close uk-close"></a>

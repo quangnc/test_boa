@@ -328,3 +328,34 @@
     padding-left: 0px;
   }
 }
+
+.footer-top {
+  border-bottom: 4px solid #deb252;
+  padding: 15px 0 25px;
+  text-align: center;
+}
+
+.footer-top h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 0;
+  color: #fff;
+}
+.footer-top h5 {
+  border-top: 1px solid #deb252;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 17px;
+  padding-top: 14px;
+  color: #fff;
+}
+
+.footer-top p:last-child {
+  margin-bottom: 0 !important;
+}
+
+#block-block-5 .content {
+  margin: auto;
+  max-width: 1220px;
+  padding-bottom: 7px;
+}

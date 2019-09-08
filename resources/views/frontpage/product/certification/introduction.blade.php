@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+@include('frontpage.product.certification.sidebar-left')
 
 <div id="main-content">
     <div class="region region-content">

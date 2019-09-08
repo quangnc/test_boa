@@ -16,6 +16,8 @@ Route::middleware( [ 'currency', 'setting' ] )->group( function () {
 	Route::get( '/', 'HomeController@index' )->name( 'homepage' );
 	Route::get( '/tin-tuc', 'NewDetailController@index' )->name( 'tintuc' );
 
+	Route::get( '/nop-don-dang-ky-online', 'RigistrationController@apply' )->name( 'apply' );
+
 	Route::get( '/rigistration', 'RigistrationController@index' )->name( 'rigistrations-index' );
 	Route::post( '/rigistration', 'RigistrationController@store' )->name( 'rigistrations-store' );
 
@@ -29,7 +31,7 @@ Route::middleware( [ 'currency', 'setting' ] )->group( function () {
 	Route::get( '/blogs', 'BlogController@blogs' )->name( 'blogs' );
 	Route::get( '/blog/{slug_id}', 'BlogController@detailBlog' )->name( 'detail-blog' );
 
-	//1. Công nhận năng lực phòng thí nghiệm
+	//1. Công nhận năng lực phòng thí nghiệm //LaboratoriesController
 	//2. Công nhận năng lực phòng thí nghiệm y tế  // Medical laboratories
 	//3. Công nhận năng lực tổ chức giám định  // InspectionBodies
 	//4. Công nhận tổ chức chứng nhận // Certification
