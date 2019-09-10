@@ -66,7 +66,7 @@
                                 @foreach($languages as $language)
                                 <li class="{{ $language->language_id == config('app.language', 2) ? 'active' : '' }}">
                                     <a href="{{ route('set-language', $language->language_id) }}">
-                                        <img src="{{ asset('upload/images/language').'/'.$language->image }}" alt="{{$language->name}}" />
+                                        <img src="{{ asset('public/upload/images/language').'/'.$language->image }}" alt="{{$language->name}}" />
                                     </a>
                                 </li>
                                 @endforeach

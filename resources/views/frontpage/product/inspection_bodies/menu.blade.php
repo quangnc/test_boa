@@ -3,4 +3,5 @@
     <li class="leaf"><a href="{{ route('inspectionBodies-search') }}" title="">Tìm kiếm</a></li>
     <li class="leaf"><a href="{{ route('inspectionBodies-application') }}" title="">Biểu mẫu</a></li>
     <li class="leaf"><a href="{{ route('inspectionBodies-document') }}" title="">Tài liệu</a></li>
+    <li class="leaf"><a href="{{ route('inspectionBodies-index') }}" title="">Gia hạn, đình chỉ, hủy bỏ</a></li>
 </ul>

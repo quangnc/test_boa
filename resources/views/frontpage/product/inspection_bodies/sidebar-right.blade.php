@@ -21,7 +21,7 @@
                                             <figure class="uk-overlay uk-overlay-hover">
                                                 <div class="uk-overlay-scale">
                                                 <a href="{{ route('laboratories-detail', $dt['id']) }}">
-                                                    <img src="{{ asset('upload').'/'.$dt['img'] }}" alt="">
+                                                    <img src="{{ asset('public/upload').'/'.$dt['img'] }}" alt="">
                                                     </a>
                                                 </div>
                                             </figure>

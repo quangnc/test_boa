@@ -19,7 +19,7 @@
                                                 <figure class="uk-overlay uk-overlay-hover">
                                                     <div class="">
                                                         <a href="{{ route('detailPost', [$item->post_id, $item->blog_category_id]) }}">
-                                                            <img src="{{ asset('upload').'/'.$item->image }}" width="140" alt="{{ asset('upload').'/'.$item->image }}">
+                                                            <img src="{{ asset('public/upload').'/'.$item->image }}" width="140" alt="{{ asset('public/upload').'/'.$item->image }}">
                                                         </a>
                                                     </div>
                                                 </figure>

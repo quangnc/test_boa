@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-
+@include('frontpage.information.sidebar-left')
 <div id="main-content">
     <div class="region region-content">
        <div id="block-system-main" class="block block-system">
@@ -16,3 +16,5 @@
  </div>
  @include('frontpage.sidebar-right')
 @endsection
+
+

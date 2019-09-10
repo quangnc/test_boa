@@ -43,6 +43,7 @@ Route::middleware( [ 'currency', 'setting' ] )->group( function () {
 	Route::get( '/phong-thi-nghiem/tim-kiem', 'LaboratoriesController@search' )->name( 'laboratories-search' );
 	Route::get( '/phong-thi-nghiem/bieu-mau-phong-thi-nghiem', 'LaboratoriesController@applicationForm' )->name( 'laboratories-application' );
 	Route::get( '/phong-thi-nghiem/tai-lieu-phong-thi-nghiem', 'LaboratoriesController@document' )->name( 'laboratories-document' );
+	// Route::get( '/phong-thi-nghiem/', 'LaboratoriesController@document' )->name( 'laboratories-document' );
 	
 	//to-chuc-chung-nhan
 	Route::get( '/to-chuc-chung-nhan/gioi-thieu', 'CertificationController@introduction' )->name( 'certification-introduction' );

@@ -359,3 +359,8 @@
   max-width: 1220px;
   padding-bottom: 7px;
 }
+.uk-overlay-scale img {
+  height: 90px;
+  width: 150px;
+  object-fit: contain;
+}

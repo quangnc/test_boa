@@ -23,7 +23,7 @@
                         @foreach ($data['slides'] as $slide)
                             <tr>
                                 <td scope="row">{{ $slide->id }}</td>
-                                <td style="width: 500px;"><img src=" {{ asset('upload').'/'.$slide->image }} " alt=" {{ $slide->image }} " width="500" height="257"></td>
+                                <td style="width: 500px;"><img src=" {{ asset('public/upload').'/'.$slide->image }} " alt=" {{ $slide->image }} " width="500" height="257"></td>
                                 <td>{{ $slide->title }}</td>
                                 <td>{{ $slide->sort_order }}</td>
                                 <td>{{ $slide->status == 0 ? "Enable" :  "Disable" }}</td>

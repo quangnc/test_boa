@@ -4,7 +4,7 @@
                 <div class="footer-top">
                     <div class="container">
                         <h3>Trụ sở chính</h3>
-                        <h5>Viện Nghiên Cứu Phát Triển Tiêu Chuẩn Chất Lượng</h5>
+                        <h5>Viện Công Nhận Chất Lượng Việt Nam</h5>
                         <p>Địa chỉ: Số 52, ngõ 46, đường Liên Mạc, phường Liên Mạc, quận Bắc Từ Liêm, TP.Hà Nội
                             <br> Điện thoại: 024.22.66.1111 - Fax: (0243 247 158)
                             <br> Hotline: 024.22.66.1111

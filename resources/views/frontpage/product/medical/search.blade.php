@@ -30,7 +30,7 @@
                                           Số VILAS MED </label>
                                       <div class="views-widget">
                                           <div class="form-item form-type-textfield form-item-field-dichvu-vilas-med-value">
-                                              <input type="text" id="edit-field-dichvu-vilas-med-value" name="field_dichvu_vilas_med_value" value="" size="30" maxlength="128" class="form-text" placeholder="Số VILAS MED">
+                                              <input type="text" id="edit-field-dichvu-vilas-med-value" name="field_dichvu_vilas_med_value" value="" size="30" maxlength="128" class="form-text" placeholder="Số VILAS - MED">
                                           </div>
                                       </div>
                                   </div>

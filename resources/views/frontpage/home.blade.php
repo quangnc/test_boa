@@ -24,7 +24,7 @@
                                     @isset($slides)
                                     @foreach($slides as $slide)
                                         <li>
-                                            <img src="{{ asset('upload').'/'.$slide->image }}" alt=" {{ $slide->title }}"/>
+                                            <img src="{{ asset('public/upload').'/'.$slide->image }}" alt=" {{ $slide->title }}"/>
                                             <div class="slide-title uk-text-left"></div>
                                         </li>
                                     @endforeach
@@ -89,7 +89,7 @@
                                               <div id="block-menu-menu-menu-to-chuc-chung-nhan" class="block block-menu">
                                                  <h2>Danh mục</h2>
                                                  <div class="content">
-                @include('frontpage.product.certification.menu')
+                                                   @include('frontpage.product.certification.menu')
                                                     
                                                  </div>
                                               </div>
@@ -109,7 +109,7 @@
                                                 <li class="leaf"><a href="{{ route('laboratories-search') }}" title="">Tìm kiếm</a></li>
                                                 <li class="leaf"><a href="{{ route('laboratories-application') }}" title="">Biểu mẫu</a></li>
                                                 <li class="leaf"><a href="{{ route('laboratories-document') }}" title="">Tài liệu</a></li>
-                                                <li class="last leaf"><a href="/vi/thi-nghiem" title="">Gia hạn, đình chỉ, hủy bỏ</a></li>
+                                                <li class="last leaf"><a href="/" title="">Gia hạn, đình chỉ, hủy bỏ</a></li>
                                            </ul>
                                         </div>
                                      </div>
@@ -126,7 +126,7 @@
                                                 <li class="leaf"><a href="{{ route('laboratories-search') }}" title="">Tìm kiếm</a></li>
                                                 <li class="leaf"><a href="{{ route('laboratories-application') }}" title="">Biểu mẫu</a></li>
                                                 <li class="leaf"><a href="{{ route('laboratories-document') }}" title="">Tài liệu</a></li>
-                                                <li class="last leaf"><a href="/vi/thi-nghiem" title="">Gia hạn, đình chỉ, hủy bỏ</a></li>
+                                                <li class="last leaf"><a href="/" title="">Gia hạn, đình chỉ, hủy bỏ</a></li>
                                            </ul>
                                         </div>
                                      </div>
@@ -163,7 +163,7 @@
                                                 <h2>{{ $support_desc->title }}</h2>
                                                    <div style="padding-left: 10px; margin-top: -10px;">
                                                       <div class="image">
-                                                         <img src="{{ asset('upload').'/'.$item->image }}" alt="{{ asset('upload').'/'.$item->image }}">
+                                                         <img src="{{ asset('public/upload').'/'.$item->image }}" alt="{{ asset('public/upload').'/'.$item->image }}">
                                                          {{-- <img src="http://issq.org.vn/image/data/cskh.jpg"> --}}
                                                       </div>
                                                       <p style="    padding-left: 55px;">
@@ -278,7 +278,7 @@
                                           <li class="uk-text-center">
                                              <figure class="uk-overlay uk-overlay-hover">
                                                 <div class="uk-overlay-scale">
-                                                <img src="{{ asset('upload').'/'.$item->image }}" title="{{ $item->title}}" />
+                                                <img src="{{ asset('public/upload').'/'.$item->image }}" title="{{ $item->title}}" />
                                                 </div>
                                                 <a class="uk-position-cover" href="{{$item->url}}" target="_blank"></a>
                                           </li>

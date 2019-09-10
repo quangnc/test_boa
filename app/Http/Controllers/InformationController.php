@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App;
 use App\Repositories\Read\ConfigSetting;
 use App\Models\Menu;
+use App\Models\CateMenu;
 use App\Models\BlogPost;
 use App\Models\BlogCategoryDescription;
 use App\Models\BlogCategory;
@@ -15,10 +16,19 @@ class InformationController extends Controller
     use ConfigSetting;
 
     public function detail( $id)  {
-        $data['pageClass'] = "html not-front not-logged-in no-sidebars page-tim-kiem-thi-nghiem i18n-en adminimal-theme page-views page-views jquery-once-1-processed mq-desktop";
+        $data['pageClass'] = "html not-front not-logged-in no-sidebars page-node page-node- page-node-11968 node-type-tintuc i18n-vi adminimal-theme page-views page-views jquery-once-1-processed mq-desktop";
         $menu = Menu::find($id);
+        $data['id'] = $id;
         $menuDescription = $menu->menu_descriptions()->where('language_id', config('app.language', $this->adminLanguage()))->first();
         $blogs = BlogPost::with('blog_post_descriptions', 'blog_categories' )->get();
+        $cate_menu = $menu->cate_menu_id;
+        $listItemMenu = Menu::where('cate_menu_id', $cate_menu)->get();
+        $listMenu = array();
+        foreach ($listItemMenu as $value) {
+            $item =  $value->menu_descriptions()->where('language_id', config('app.language', $this->adminLanguage()))->first();
+            $listMenu[] = $item;
+        }
+        
         if ( $blogs) {
             foreach($blogs as $blog) {
                 $blogCate = $blog->blog_categories->blog_category_descriptions()->where('language_id', config('app.language', $this->adminLanguage()))->first();
@@ -40,7 +50,7 @@ class InformationController extends Controller
                 );
             }
         }
-        return view('frontpage.information.information', compact('data', 'menu', 'menuDescription'));
+        return view('frontpage.information.information', compact('data', 'menu', 'menuDescription', 'listMenu'));
     }
 
     public function detailPost( $id, $cate)  {
